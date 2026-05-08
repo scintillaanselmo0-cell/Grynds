@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="page-title">GAMBLING LIFE — The Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="progress"></div>
+
+<nav>
+  <div class="nav-logo" id="nav-logo"><span style="color:var(--green2)">G</span><span style="color:var(--white)">R</span><span style="color:var(--green2)">Y</span><span style="color:var(--white)">N</span><span style="color:var(--green2)">D</span></div>
+  <div class="nav-right">
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#intro">Intro</a></li>
+      <li><a href="#trading">Trading</a></li>
+      <li><a href="#dropshipping">Dropshipping</a></li>
+      <li><a href="#crypto">Crypto</a></li>
+      <li><a href="#creator">Creator</a></li>
+      <li><a href="#gambling">Gambling</a></li>
+      <li><a href="#consulting">Consulting</a></li>
+    </ul>
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" onclick="setLang('it')">IT</button>
+    </div>
+  </div>
+</nav>
+
+<div class="ticker-wrap">
+  <div class="ticker-label">LIVE</div>
+  <div class="ticker-track" id="ticker-track"><span>Loading news...</span></div>
+</div>
+
+<!-- COVER -->
+<div class="cover">
+  <div class="cover-tag" id="cover-tag">Restricted Document — Limited Access</div>
+  <h1 id="cover-h1" class="cover-main-title">
+    <span id="cover-h1-en" class="cover-h1-stack cover-h1-lang cover-h1-lang--en">
+      <span class="cover-title-line cover-title-line--primary">
+        <span class="grynd-letter" style="color:var(--green2)" data-grynd-target="pill-gambling" data-grynd-char-index="0">G</span><span class="grynd-letter" style="color:var(--white)" data-grynd-target="pill-dropshipping" data-grynd-char-index="1">R</span><span class="grynd-letter" style="color:var(--green2)" data-grynd-target="pill-crypto" data-grynd-char-index="1">Y</span><span class="grynd-letter" style="color:var(--white)" data-grynd-target="pill-brand" data-grynd-char-index="7">N</span><span class="grynd-letter" style="color:var(--green2)" data-grynd-target="pill-trading" data-grynd-char-index="3">D</span>
+      </span>
+      <span class="cover-title-line cover-title-line--secondary">RISK LIFE</span>
+    </span>
+    <span id="cover-h1-it" class="cover-h1-stack cover-h1-lang cover-h1-lang--it" hidden>
+      <span class="cover-title-line cover-title-line--primary">
+        <span class="grynd-letter" style="color:var(--green2)" data-grynd-target="pill-gambling" data-grynd-char-index="0">G</span><span class="grynd-letter" style="color:var(--white)" data-grynd-target="pill-dropshipping" data-grynd-char-index="1">R</span><span class="grynd-letter" style="color:var(--green2)" data-grynd-target="pill-crypto" data-grynd-char-index="1">Y</span><span class="grynd-letter" style="color:var(--white)" data-grynd-target="pill-brand" data-grynd-char-index="7">N</span><span class="grynd-letter" style="color:var(--green2)" data-grynd-target="pill-trading" data-grynd-char-index="3">D</span>
+      </span>
+      <span class="cover-title-line cover-title-line--secondary">VITA D'AZZARDO</span>
+    </span>
+  </h1>
+  <p class="cover-sub" id="cover-sub">The guide nobody had the courage to write.</p>
+  <div class="cover-topics">
+    <span class="topic-pill" id="pill-trading">Tra<span class="pill-target-letter" id="pill-trading-letter">d</span>ing</span>
+    <span class="topic-pill" id="pill-dropshipping">D<span class="pill-target-letter" id="pill-dropshipping-letter">r</span>opshipping</span>
+    <span class="topic-pill" id="pill-crypto">Cr<span class="pill-target-letter" id="pill-crypto-letter">y</span>pto</span>
+    <span class="topic-pill" id="pill-brand">Personal Bra<span class="pill-target-letter" id="pill-brand-letter">n</span>d</span>
+    <span class="topic-pill" id="pill-gambling"><span class="pill-target-letter" id="pill-gambling-letter">G</span>ambling</span>
+  </div>
+  <a href="#" class="cover-cta" id="cover-cta" onclick="openPricing(event)">Choose Your Plan →</a>
+  <p class="cover-cta-note">37€ · 97€ · 197€</p>
+  <div class="cover-scroll"><span id="scroll-text">Scroll</span><div class="scroll-line"></div></div>
+</div>
+
+<!-- ============ ZOOM PARALLAX SECTION ============ -->
+<div class="zp-section" id="zp-section">
+  <div class="zp-sticky" id="zp-sticky">
+    <div class="zp-noise-layer"></div>
+    <div id="zp-frame"></div>
+    <div class="zp-caption" id="zp-caption">
+      <div id="zp-cap-en">
+        <p class="zp-caption-label">Five Paths. One Truth.</p>
+        <div class="zp-caption-title"><span style="color:var(--green2)">G</span><span style="color:var(--white)">R</span><span style="color:var(--green2)">Y</span><span style="color:var(--white)">N</span><span style="color:var(--green2)">D</span></div>
+        <p class="zp-caption-sub">No filters. No gurus. No bullshit.</p>
+      </div>
+      <div id="zp-cap-it" style="display:none;">
+        <p class="zp-caption-label">Cinque Percorsi. Una Verità.</p>
+        <div class="zp-caption-title">VITA D'<span>AZZARDO</span></div>
+        <p class="zp-caption-sub">Nessun filtro. Nessun guru. Nessuna bugia.</p>
+      </div>
+    </div>
+    <div class="zp-scroll-indicator" id="zp-scroll-ind">
+      <span id="zp-scroll-label">Scroll</span>
+      <div class="zp-scroll-line"></div>
+    </div>
+  </div>
+</div>
+
+<!-- EN CONTENT -->
+<div id="en" class="lang-section active">
+<div id="intro" class="section reveal">
+  <div class="section-label">Introduction — First of all</div>
+  <h2>Why this guide <em>exists</em></h2>
+  <div class="lead">You're reading this because at some point you asked yourself: "Trading, Dropshipping, Crypto or Creator? What the hell do I do?"</div>
+  <p>It's a legitimate question. In fact, it's the right question. The problem is that almost nobody answers it honestly, directly, and completely.</p>
+  <p>Someone sells you a $997 course to tell you dropshipping is the way. Someone shows you trading profits on TikTok without showing the losses. Someone talks about crypto as if it were mathematical certainty.</p>
+  <p>The result? Total confusion. Analysis paralysis. Years wasted watching videos, reading articles, following gurus — without taking a single concrete step.</p>
+  <div class="quote-block"><p>Knowledge without action is decoration. Action without knowledge is self-destruction.</p></div>
+  <div class="green-line"></div>
+  <h3>Why knowing the difference is fundamental</h3>
+  <p>Imagine you want to travel from New York to Los Angeles. You can fly, take a train, drive, or take a bus. They all get you there — but with completely different times, costs, and requirements.</p>
+  <p>With income methods it works exactly the same way. Trading, Dropshipping, Crypto, Creator, Gambling — all can lead you to earn. But with completely different dynamics, timelines and risk profiles.</p>
+  <ul class="bullets">
+    <li><span class="icon" style="color:var(--green2)">▸</span><span>Who starts trading thinking it's like dropshipping burns their capital in three months.</span></li>
+    <li><span class="icon" style="color:var(--green2)">▸</span><span>Who starts dropshipping thinking it's passive ends up working 12 hours a day with no results.</span></li>
+    <li><span class="icon" style="color:var(--green2)">▸</span><span>Who bets everything on personal branding without understanding it takes 12-18 months of unpaid work quits after 6 weeks.</span></li>
+  </ul>
+  <div class="green-line"></div>
+  <h3>What you'll find in this guide</h3>
+  <ul class="bullets">
+    <li><span class="icon" style="color:var(--green2)">▸</span><span>The real difference — mechanics, structure, risks — between all the paths.</span></li>
+    <li><span class="icon" style="color:var(--green2)">▸</span><span>What you can concretely get from each one and what it really costs: time, money, nerves.</span></li>
+    <li><span class="icon" style="color:var(--green2)">▸</span><span>How to understand which path is right for you — not in theory, but based on who you are.</span></li>
+    <li><span class="icon" style="color:var(--green2)">▸</span><span>How to think, make proposals, when to say no — the operational mindset nobody teaches.</span></li>
+    <li><span class="icon" style="color:var(--green2)">▸</span><span>Direct access to consulting so you never have to act blind.</span></li>
+  </ul>
+  <div class="warning-box"><span class="w-icon">◈</span><p>This guide contains information that might make you completely change direction. That's not a warning. It's a promise.</p></div>
+</div>
+
+<div id="trading" class="chapter-header reveal"><div class="chapter-num">Chapter 01</div><div class="chapter-title">TRADING</div><div class="chapter-divider"></div></div>
+<div class="content reveal">
+  <h3>What it really is</h3>
+  <p>Buying and selling financial assets — stocks, currencies, commodities, indices — trying to profit from price differences over time. It's not magic. It's not luck. It's a job with precise rules and a learning curve that takes years.</p>
+  <h3>How the process works</h3>
+  <ul class="bullets">
+    <li><span class="icon" style="color:var(--green2)">01</span><span>Open an account with a regulated broker (Interactive Brokers, Degiro, Saxo)</span></li>
+    <li><span class="icon" style="color:var(--green2)">02</span><span>Study technical or fundamental analysis — you can't improvise</span></li>
+    <li><span class="icon" style="color:var(--green2)">03</span><span>Define a strategy with non-negotiable rules: entry, exit, risk per trade</span></li>
+    <li><span class="icon" style="color:var(--green2)">04</span><span>Trade in demo mode first until you get consistent results</span></li>
+    <li><span class="icon" style="color:var(--green2)">05</span><span>Move to real money with capital you can afford to lose</span></li>
+    <li><span class="icon" style="color:var(--green2)">06</span><span>Record everything, analyze mistakes, optimize over time</span></li>
+  </ul>
+  <h3>The truth without filters</h3>
+  <p>85% of retail traders lose money. Not because trading doesn't work — but because people start without studying, without a plan, with unrealistic expectations. The consistently profitable trader took years. And you won't find them on TikTok showing profits — because they're busy trading.</p>
+  <div class="warning-box"><span class="w-icon">◈</span><p>Recommended minimum capital: $5,000-$10,000. Time before consistent profits: 12-24 months of serious study and practice.</p></div>
+  <div class="label-tag">Good for you if...</div>
+  <ul class="bullets">
+    <li><span class="icon" style="color:var(--green3)">✓</span><span>You're analytical, disciplined, handle stress without losing your mind</span></li>
+    <li><span class="icon" style="color:var(--green3)">✓</span><span>You have capital you don't need to live on</span></li>
+    <li><span class="icon" style="color:var(--gray)">✗</span><span>NOT for you if you want to earn immediately or can't handle losses emotionally</span></li>
+  </ul>
+</div>
+
+<div id="dropshipping" class="chapter-header reveal"><div class="chapter-num">Chapter 02</div><div class="chapter-title">DROP-<br>SHIPPING</div><div class="chapter-divider"></div></div>
+<div class="content reveal">
+  <h3>What it really is</h3>
+  <p>Selling products online without physically having them. The customer buys from you, you forward the order to the supplier, the supplier ships to the customer. You manage the store and marketing — without ever touching the product. It's not passive. It's not automatic. But it works, if done right.</p>
+  <h3>How the process works</h3>
+  <ul class="bullets">
+    <li><span class="icon" style="color:var(--green2)">01</span><span>Choose a niche and reliable suppliers (Zendrop, CJ Dropshipping, European suppliers)</span></li>
+    <li><span class="icon" style="color:var(--green2)">02</span><span>Build a professional store on Shopify</span></li>
+    <li><span class="icon" style="color:var(--green2)">03</span><span>Launch ad campaigns on Meta or TikTok to drive traffic</span></li>
+    <li><span class="icon" style="color:var(--green2)">04</span><span>Test products until you find the winning one</span></li>
+    <li><span class="icon" style="color:var(--green2)">05</span><span>Optimize ads, price, product page, checkout</span></li>
+    <li><span class="icon" style="color:var(--green2)">06</span><span>Handle customer service, returns and suppliers</span></li>
+  </ul>
+  <h3>The truth without filters</h3>
+  <p>Dropshipping requires ad budget. Expect to spend $300-$700 on tests before finding a winning product. Anyone who tells you it can be done for free is lying.</p>
+  <div class="warning-box"><span class="w-icon">◈</span><p>Realistic minimum budget to start: $800-$1,500 between store and ads. Don't start with less.</p></div>
+  <div class="label-tag">Good for you if...</div>
+  <ul class="bullets">
+    <li><span class="icon" style="color:var(--green3)">✓</span><span>You have starting budget and want a scalable online business</span></li>
+    <li><span class="icon" style="color:var(--green3)">✓</span><span>You're willing to learn digital marketing on the field</span></li>
+    <li><span class="icon" style="color:var(--gray)">✗</span><span>NOT for you if you're looking for something passive or have no starting budget</span></li>
+  </ul>
+</div>
+
+<div id="crypto" class="chapter-header reveal"><div class="chapter-num">Chapter 03</div><div class="chapter-title">CRYPTO-<br>CURRENCY</div><div class="chapter-divider"></div></div>
+<div class="content reveal">
+  <h3>What it really is</h3>
+  <p>Decentralized digital currencies on blockchain. Bitcoin is the first and most established. Thousands of others exist with very different reliability levels. Critical point: investing in crypto and trading crypto are two completely different activities.</p>
+  <h3>Investing vs Speculating</h3>
+  <p><strong style="color:var(--green3)">INVESTING</strong> = buying established assets with a long-term thesis (3-5+ years) and holding. DCA strategy: fixed amount every month regardless of price.</p>
+  <p><strong style="color:var(--gray2)">SPECULATING</strong> = buying and selling short-term exploiting volatility. Very high risk. Most people lose.</p>
+  <h3>How the process works</h3>
+  <ul class="bullets">
+    <li><span class="icon" style="color:var(--green2)">01</span><span>Open account on regulated exchange (Coinbase, Kraken)</span></li>
+    <li><span class="icon" style="color:var(--green2)">02</span><span>Start with small amounts — don't put everything in at once</span></li>
+    <li><span class="icon" style="color:var(--green2)">03</span><span>Choose strategy: long-term HODl or active trading</span></li>
+    <li><span class="icon" style="color:var(--green2)">04</span><span>Use hardware wallet for significant amounts</span></li>
+    <li><span class="icon" style="color:var(--green2)">05</span><span>Manage taxes: capital gains above €2,000 taxed at 26% in Italy</span></li>
+  </ul>
+  <div class="warning-box"><span class="w-icon">◈</span><p>Absolute rule: only invest what you can afford to lose 100%. It's not pessimism — it's the only correct mindset for this market.</p></div>
+</div>
+
+<div id="creator" class="chapter-header reveal"><div class="chapter-num">Chapter 04</div><div class="chapter-title">BECOMING<br>A CHARACTER</div><div class="chapter-divider"></div></div>
+<div class="content reveal">
+  <h3>What it really is</h3>
+  <p>Building an audience around your person, your skills or your story — and monetizing it. It's not influencer marketing 2015 style. It's professional personal branding in 2025.</p>
+  <h3>How the process works</h3>
+  <ul class="bullets">
+    <li><span class="icon" style="color:var(--green2)">01</span><span>Choose a specific, recognizable niche — not generic</span></li>
+    <li><span class="icon" style="color:var(--green2)">02</span><span>Master one platform before diversifying</span></li>
+    <li><span class="icon" style="color:var(--green2)">03</span><span>Create content consistently — not when you feel like it, with a plan</span></li>
+    <li><span class="icon" style="color:var(--green2)">04</span><span>Build real engagement — reply, interact, build community</span></li>
+    <li><span class="icon" style="color:var(--green2)">05</span><span>Monetize: brand deals, digital products, courses, consulting, membership</span></li>
+  </ul>
+  <h3>The truth without filters</h3>
+  <p>It takes 12-18 months of constant, unpaid work before seeing significant economic results. Most people quit after 6-8 weeks because "it's not growing fast enough".</p>
+  <div class="warning-box"><span class="w-icon">◈</span><p>Don't confuse visibility with income. 100k followers with no strategy = $0. 3k highly engaged followers with a product = great revenue.</p></div>
+  <div class="label-tag">Good for you if...</div>
+  <ul class="bullets">
+    <li><span class="icon" style="color:var(--green3)">✓</span><span>You have something specific to say and are consistent by nature</span></li>
+    <li><span class="icon" style="color:var(--gray)">✗</span><span>NOT for you if you want quick results or can't maintain consistency</span></li>
+  </ul>
+</div>
+
+<div id="gambling" class="chapter-header reveal"><div class="chapter-num">Chapter 05</div><div class="chapter-title">GAMBLING</div><div class="chapter-divider"></div></div>
+<div class="content reveal">
+  <h3>Yes, we talk about it. Because it exists.</h3>
+  <p>Gambling is a method of earning money. Said that — with all due clarity — let's move on. There's an enormous difference between pure gambling (slots, roulette) and skill-based gambling (poker, value betting). In the first, math is against you by definition. In the second, with study and discipline, you can develop a real statistical edge.</p>
+  <h3>For those with real skill</h3>
+  <ul class="bullets">
+    <li><span class="icon" style="color:var(--green2)">Poker</span><span>Theory, thousands of hands, session analysis, strict bankroll management</span></li>
+    <li><span class="icon" style="color:var(--green2)">Value</span><span>Statistical models to find undervalued odds from bookmakers</span></li>
+    <li><span class="icon" style="color:var(--green2)">Rule</span><span>Never risk more than 1-3% of capital on a single bet — whoever breaks this rule loses everything, always</span></li>
+  </ul>
+  <h3>The truth without filters</h3>
+  <p>Pure gambling is a tax on mathematical ignorance. Slots have an RTP of 85-95% — in the long run you always lose, by definition. Professional poker and value betting exist as real income sources — but require years of study and iron emotional management.</p>
+  <div class="warning-box"><span class="w-icon">◈</span><p>Gambling has pathological addiction potential. If you have compulsive tendencies this path is not for you — regardless of skill level.</p></div>
+</div>
+
+<div class="chapter-header reveal"><div class="chapter-num">Chapter 06</div><div class="chapter-title">MINDSET</div><div class="chapter-divider"></div></div>
+<div class="content reveal">
+  <div class="label-tag">In the learning phase</div>
+  <ul class="bullets">
+    <li><span class="icon" style="color:var(--green2)">→</span><span>Be humble. You don't know yet. Study those who have actually done the journey.</span></li>
+    <li><span class="icon" style="color:var(--green2)">→</span><span>Don't rush. Haste burns capital and motivation, almost always together.</span></li>
+    <li><span class="icon" style="color:var(--green2)">→</span><span>Accept losses as a learning cost — not as personal failures.</span></li>
+  </ul>
+  <div class="label-tag">In the operational phase</div>
+  <ul class="bullets">
+    <li><span class="icon" style="color:var(--green2)">→</span><span>Be decisive. You have a plan — execute it. Doubt midway is the fastest way to lose.</span></li>
+    <li><span class="icon" style="color:var(--green2)">→</span><span>Separate emotions from decisions. Emotions are information, not instructions.</span></li>
+    <li><span class="icon" style="color:var(--green2)">→</span><span>Stay cold when things go wrong — that's where you see who lasts and who quits.</span></li>
+  </ul>
+  <div class="label-tag">In the growth phase</div>
+  <ul class="bullets">
+    <li><span class="icon" style="color:var(--green2)">→</span><span>Be selective. Not every opportunity deserves your time.</span></li>
+    <li><span class="icon" style="color:var(--green2)">→</span><span>Scale only what already works. Optimize before expanding.</span></li>
+    <li><span class="icon" style="color:var(--green2)">→</span><span>The right people are worth more than any strategy.</span></li>
+  </ul>
+  <div class="green-line"></div>
+  <h3>How to make a proposal that works</h3>
+  <ul class="bullets">
+    <li><span class="icon" style="color:var(--green2)">01</span><span><strong style="color:var(--white)">CLARITY</strong> — What you offer, what you ask, what the other gains. No ambiguity.</span></li>
+    <li><span class="icon" style="color:var(--green2)">02</span><span><strong style="color:var(--white)">VALUE</strong> — The benefit for who receives it, not your enthusiasm.</span></li>
+    <li><span class="icon" style="color:var(--green2)">03</span><span><strong style="color:var(--white)">URGENCY</strong> — A real reason to decide now. Not manipulative — concrete.</span></li>
+  </ul>
+  <div class="quote-block"><p>A proposal that needs to be explained twice is not yet ready to be made.</p></div>
+  <div class="green-line"></div>
+  <h3>When to accept and when to say no</h3>
+  <div class="label-tag">Accept if...</div>
+  <ul class="bullets">
+    <li><span class="icon" style="color:var(--green3)">✓</span><span>The risk is calculated on real numbers, not just emotionally</span></li>
+    <li><span class="icon" style="color:var(--green3)">✓</span><span>The deal is clear, defined, preferably in writing</span></li>
+    <li><span class="icon" style="color:var(--green3)">✓</span><span>The counterpart has a verifiable track record</span></li>
+  </ul>
+  <div class="label-tag">Say no if...</div>
+  <ul class="bullets">
+    <li><span class="icon" style="color:var(--gray)">✗</span><span>You feel pressure to decide immediately — always a red flag, no exceptions</span></li>
+    <li><span class="icon" style="color:var(--gray)">✗</span><span>The numbers don't add up — if you don't understand the model, don't enter</span></li>
+    <li><span class="icon" style="color:var(--gray)">✗</span><span>The deal is based on unverifiable verbal promises</span></li>
+    <li><span class="icon" style="color:var(--gray)">✗</span><span>Your gut says no — instinct is the sum of all your past experiences</span></li>
+  </ul>
+</div>
+
+<div class="chapter-header reveal"><div class="chapter-num">Chapter 07</div><div class="chapter-title">DIRECT<br>ADVICE</div><div class="chapter-divider"></div></div>
+<div class="content reveal">
+  <ul class="bullets">
+    <li><span class="icon" style="color:var(--green2)">01</span><span>Start with one. Scattered focus is the number one killer of potential entrepreneurs — not lack of talent.</span></li>
+    <li><span class="icon" style="color:var(--green2)">02</span><span>Your time has value. Every hour without action is an hour gifted to your competition.</span></li>
+    <li><span class="icon" style="color:var(--green2)">03</span><span>Money follows value. Think about what problem you solve, for whom, and how much it's worth to them.</span></li>
+    <li><span class="icon" style="color:var(--green2)">04</span><span>Failing small is an investment. A project that loses €200 teaches more than a €2,000 course.</span></li>
+    <li><span class="icon" style="color:var(--green2)">05</span><span>The people around you change your results. It's not philosophy — it's statistics.</span></li>
+    <li><span class="icon" style="color:var(--green2)">06</span><span>Discipline beats motivation. Motivation comes and goes. Discipline stays.</span></li>
+    <li><span class="icon" style="color:var(--green2)">07</span><span>Don't wait for the right moment. The right moment doesn't exist. Only now exists.</span></li>
+  </ul>
+  <div class="quote-block"><p>Who waits for perfect conditions never plants. And who never plants has nothing to harvest.</p></div>
+</div>
+
+<div id="consulting" class="section reveal">
+  <div class="section-label">Exclusive Access — Buyers Only</div>
+  <h2>Ask before <em>acting</em></h2>
+  <div class="lead">You bought this guide. That gives you access to something worth more than the guide itself.</div>
+  <p>How many times have you made a decision and only afterward thought: I should have asked first? This section exists to eliminate that problem.</p>
+  <p>Got a negotiation going? Evaluating a proposal? Want to know how to set up an important conversation? Send your situation and get an operational response — not generic theory, but precise guidance.</p>
+  <h3>Example questions</h3>
+  <ul class="bullets">
+    <li><span class="icon" style="color:var(--green2)">→</span><span>"I've been offered a 50/50 partnership — does it make sense?"</span></li>
+    <li><span class="icon" style="color:var(--green2)">→</span><span>"I'm about to invest €1,500 in crypto — how do I move?"</span></li>
+    <li><span class="icon" style="color:var(--green2)">→</span><span>"How do I write this business proposal without sounding desperate?"</span></li>
+    <li><span class="icon" style="color:var(--green2)">→</span><span>"I'm scared to start — what do I do concretely tomorrow morning?"</span></li>
+    <li><span class="icon" style="color:var(--green2)">→</span><span>"This contract has strange clauses — how do I read it?"</span></li>
+  </ul>
+  <div class="warning-box"><span class="w-icon">◈</span><p>Access is personal and non-transferable. Included for 12 months from activation. The link is in your purchase confirmation email.</p></div>
+</div>
+
+<div class="closing reveal">
+  <div class="big-text">NOW YOU<br><span>KNOW.</span></div>
+  <p class="sub">Now choose. It's your move.</p>
+  <a href="#" class="cta" onclick="openPricing(event)">Choose Your Plan →</a>
+</div>
+</div>
+
+<!-- IT CONTENT -->
+<div id="it" class="lang-section">
+<div id="intro-it" class="section reveal">
+  <div class="section-label">Introduzione — Prima di tutto</div>
+  <h2>Perché questa guida <em>esiste</em></h2>
+  <div class="lead">Stai leggendo questo documento perché a un certo punto ti sei fatto una domanda precisa: "Trading, Dropshipping, Crypto o Creator? Che cazzo faccio?"</div>
+  <p>È una domanda legittima. Anzi, è la domanda giusta. Il problema è che quasi nessuno te la risponde in modo onesto, diretto e completo.</p>
+  <p>C'è chi ti vende corsi da 997€ per dirti che il dropshipping è la via. C'è chi ti mostra i guadagni del trading su TikTok senza mostrarti le perdite. C'è chi ti parla di crypto come se fosse una certezza matematica.</p>
+  <p>Il risultato? Confusione totale. Paralisi da analisi. Anni persi a guardare video, leggere articoli, seguire guru — senza muovere un singolo passo concreto.</p>
+  <div class="quote-block"><p>La conoscenza senza azione è decorazione. L'azione senza conoscenza è autodistruzione.</p></div>
+  <div class="green-line"></div>
+  <h3>Perché conoscere la differenza è fondamentale</h3>
+  <p>Immagina di voler andare da Napoli a Milano. Puoi prendere l'aereo, il treno, l'auto o il pullman. Tutti ti portano a Milano — ma con tempi, costi e requisiti completamente diversi.</p>
+  <p>Con i metodi di guadagno funziona esattamente così. Trading, Dropshipping, Crypto, Creator, Azzardo — tutti possono portarti a guadagnare. Ma con dinamiche, tempi e profili di rischio completamente diversi.</p>
+  <ul class="bullets">
+    <li><span class="icon" style="color:var(--green2)">▸</span><span>Chi inizia il trading pensando sia come il dropshipping brucia il capitale in tre mesi.</span></li>
+    <li><span class="icon" style="color:var(--green2)">▸</span><span>Chi inizia il dropshipping pensando sia passivo si ritrova a lavorare 12 ore al giorno senza risultati.</span></li>
+    <li><span class="icon" style="color:var(--green2)">▸</span><span>Chi punta tutto sul personal brand senza capire che richiede 12-18 mesi di lavoro gratuito molla dopo 6 settimane.</span></li>
+  </ul>
+  <div class="green-line"></div>
+  <h3>Cosa trovi in questa guida</h3>
+  <ul class="bullets">
+    <li><span class="icon" style="color:var(--green2)">▸</span><span>La differenza reale — meccanica, struttura, rischi — tra tutti i percorsi.</span></li>
+    <li><span class="icon" style="color:var(--green2)">▸</span><span>Cosa puoi ottenere concretamente da ognuno e cosa ti costa davvero: tempo, soldi, nervi.</span></li>
+    <li><span class="icon" style="color:var(--green2)">▸</span><span>Come capire quale percorso è quello giusto per te — non in astratto, ma in base a chi sei.</span></li>
+    <li><span class="icon" style="color:var(--green2)">▸</span><span>Come pensare, fare proposte, quando dire no — la mentalità operativa che nessuno insegna.</span></li>
+    <li><span class="icon" style="color:var(--green2)">▸</span><span>Accesso diretto a consulenza per non agire mai al buio.</span></li>
+  </ul>
+  <div class="warning-box"><span class="w-icon">◈</span><p>Questa guida contiene informazioni che potrebbero farti cambiare completamente direzione. Non è un avvertimento. È una promessa.</p></div>
+</div>
+
+<div class="chapter-header reveal"><div class="chapter-num">Capitolo 01</div><div class="chapter-title">TRADING</div><div class="chapter-divider"></div></div>
+<div class="content reveal">
+  <h3>Cos'è, davvero</h3>
+  <p>Comprare e vendere asset finanziari — azioni, valute, materie prime, indici — cercando di guadagnare dalla differenza di prezzo nel tempo. Non è magia. Non è fortuna. È un lavoro con regole precise e una curva di apprendimento che dura anni.</p>
+  <h3>Come funziona il processo</h3>
+  <ul class="bullets">
+    <li><span class="icon" style="color:var(--green2)">01</span><span>Apri un conto presso un broker regolamentato (Interactive Brokers, Degiro, Saxo)</span></li>
+    <li><span class="icon" style="color:var(--green2)">02</span><span>Studi analisi tecnica o fondamentale — non si improvvisa</span></li>
+    <li><span class="icon" style="color:var(--green2)">03</span><span>Definisci una strategia con regole non negoziabili: entrata, uscita, rischio per operazione</span></li>
+    <li><span class="icon" style="color:var(--green2)">04</span><span>Operi prima in modalità demo fino a risultati costanti</span></li>
+    <li><span class="icon" style="color:var(--green2)">05</span><span>Passi al reale con capitali che puoi permetterti di perdere</span></li>
+    <li><span class="icon" style="color:var(--green2)">06</span><span>Registri tutto, analizzi gli errori, ottimizzi nel tempo</span></li>
+  </ul>
+  <h3>La verità senza filtri</h3>
+  <p>L'85% dei trader retail perde soldi. Non perché il trading non funziona — ma perché la gente inizia senza studiare, senza un piano, con aspettative irrealistiche. Il trader profittevole ci ha messo anni. E non lo trovi su TikTok — perché è impegnato a operare.</p>
+  <div class="warning-box"><span class="w-icon">◈</span><p>Capitale minimo consigliato: 5.000-10.000€. Tempo prima di profitti costanti: 12-24 mesi di studio e pratica seria.</p></div>
+  <div class="label-tag">Fa per te se...</div>
+  <ul class="bullets">
+    <li><span class="icon" style="color:var(--green3)">✓</span><span>Sei analitico, disciplinato, gestisci lo stress senza perdere la testa</span></li>
+    <li><span class="icon" style="color:var(--green3)">✓</span><span>Hai capitale che non ti serve per vivere</span></li>
+    <li><span class="icon" style="color:var(--gray)">✗</span><span>NON fa per te se vuoi guadagnare subito o non sopporti le perdite emotivamente</span></li>
+  </ul>
+</div>
+
+<div class="chapter-header reveal"><div class="chapter-num">Capitolo 02</div><div class="chapter-title">DROP-<br>SHIPPING</div><div class="chapter-divider"></div></div>
+<div class="content reveal">
+  <h3>Cos'è, davvero</h3>
+  <p>Vendi prodotti online senza averli fisicamente. Il cliente compra da te, tu giri l'ordine al fornitore, il fornitore spedisce al cliente. Tu gestisci il negozio e il marketing — senza toccare mai la merce. Non è passivo. Non è automatico. Ma funziona, se fatto nel modo giusto.</p>
+  <h3>Come funziona il processo</h3>
+  <ul class="bullets">
+    <li><span class="icon" style="color:var(--green2)">01</span><span>Scegli una nicchia e fornitori affidabili (Zendrop, CJ Dropshipping, fornitori europei)</span></li>
+    <li><span class="icon" style="color:var(--green2)">02</span><span>Crei un negozio professionale su Shopify</span></li>
+    <li><span class="icon" style="color:var(--green2)">03</span><span>Lanci campagne su Meta o TikTok per portare traffico</span></li>
+    <li><span class="icon" style="color:var(--green2)">04</span><span>Testi prodotti fino a trovare il winning product</span></li>
+    <li><span class="icon" style="color:var(--green2)">05</span><span>Ottimizzi ads, prezzo, pagina prodotto, checkout</span></li>
+    <li><span class="icon" style="color:var(--green2)">06</span><span>Gestisci customer service, resi e fornitori</span></li>
+  </ul>
+  <h3>La verità senza filtri</h3>
+  <p>Il dropshipping richiede budget per le ads. Aspettati di spendere 300-700€ in test prima di trovare un prodotto vincente. Chi ti dice che si può fare gratis sta mentendo.</p>
+  <div class="warning-box"><span class="w-icon">◈</span><p>Budget minimo realistico per iniziare: 800-1.500€ tra negozio e ads. Non iniziare con meno.</p></div>
+  <div class="label-tag">Fa per te se...</div>
+  <ul class="bullets">
+    <li><span class="icon" style="color:var(--green3)">✓</span><span>Hai budget iniziale e vuoi un business scalabile online</span></li>
+    <li><span class="icon" style="color:var(--green3)">✓</span><span>Sei disposto a imparare il marketing digitale sul campo</span></li>
+    <li><span class="icon" style="color:var(--gray)">✗</span><span>NON fa per te se cerchi qualcosa di passivo o non hai budget iniziale</span></li>
+  </ul>
+</div>
+
+<div class="chapter-header reveal"><div class="chapter-num">Capitolo 03</div><div class="chapter-title">CRIPTO-<br>VALUTE</div><div class="chapter-divider"></div></div>
+<div class="content reveal">
+  <h3>Cos'è, davvero</h3>
+  <p>Valute digitali decentralizzate su blockchain. Bitcoin è la prima e più consolidata. Ne esistono migliaia di altre con livelli di affidabilità molto diversi. Punto critico: investire in crypto e fare trading di crypto sono due attività completamente diverse.</p>
+  <h3>Investire vs Speculare</h3>
+  <p><strong style="color:var(--green3)">INVESTIRE</strong> = comprare asset consolidati con orizzonte lungo (3-5+ anni) e tenerli. Strategia DCA: cifra fissa ogni mese indipendentemente dal prezzo.</p>
+  <p><strong style="color:var(--gray2)">SPECULARE</strong> = comprare e vendere nel breve sfruttando la volatilità. Rischio molto alto. La maggior parte perde.</p>
+  <h3>Come funziona il processo</h3>
+  <ul class="bullets">
+    <li><span class="icon" style="color:var(--green2)">01</span><span>Apri account su exchange regolamentato (Coinbase, Kraken)</span></li>
+    <li><span class="icon" style="color:var(--green2)">02</span><span>Inizia con cifre piccole — non mettere tutto subito</span></li>
+    <li><span class="icon" style="color:var(--green2)">03</span><span>Scegli strategia: HODl a lungo o trading attivo</span></li>
+    <li><span class="icon" style="color:var(--green2)">04</span><span>Usa wallet hardware per importi significativi</span></li>
+    <li><span class="icon" style="color:var(--green2)">05</span><span>Gestisci le tasse: plusvalenze sopra 2.000€ tassate al 26% in Italia</span></li>
+  </ul>
+  <div class="warning-box"><span class="w-icon">◈</span><p>Regola assoluta: investi solo quello che puoi permetterti di perdere al 100%. Non è pessimismo — è l'unica mentalità corretta per questo mercato.</p></div>
+</div>
+
+<div class="chapter-header reveal"><div class="chapter-num">Capitolo 04</div><div class="chapter-title">DIVENTARE<br>UN PERSONAGGIO</div><div class="chapter-divider"></div></div>
+<div class="content reveal">
+  <h3>Cos'è, davvero</h3>
+  <p>Costruire un pubblico attorno alla tua persona, alle tue competenze o alla tua storia — e monetizzarlo. Non è influencer marketing stile 2015. È personal branding professionale nel 2025.</p>
+  <h3>Come funziona il processo</h3>
+  <ul class="bullets">
+    <li><span class="icon" style="color:var(--green2)">01</span><span>Scegli una nicchia specifica e riconoscibile — non generica</span></li>
+    <li><span class="icon" style="color:var(--green2)">02</span><span>Padroneggi una piattaforma principale prima di diversificare</span></li>
+    <li><span class="icon" style="color:var(--green2)">03</span><span>Crei contenuti con costanza — non quando hai voglia, con un piano</span></li>
+    <li><span class="icon" style="color:var(--green2)">04</span><span>Costruisci engagement reale — rispondi, interagisci, crea comunità</span></li>
+    <li><span class="icon" style="color:var(--green2)">05</span><span>Monetizzi: brand deal, prodotti digitali, corsi, consulenze, membership</span></li>
+  </ul>
+  <h3>La verità senza filtri</h3>
+  <p>Ci vogliono 12-18 mesi di lavoro costante e gratuito prima di vedere risultati economici significativi. La maggior parte molla dopo 6-8 settimane perché "non cresce abbastanza velocemente".</p>
+  <div class="warning-box"><span class="w-icon">◈</span><p>Non confondere visibilità con guadagno. 100k follower senza strategia = 0€. 3k follower fidelizzati con un prodotto = ottimo reddito.</p></div>
+  <div class="label-tag">Fa per te se...</div>
+  <ul class="bullets">
+    <li><span class="icon" style="color:var(--green3)">✓</span><span>Hai qualcosa di specifico da dire e sei costante per natura</span></li>
+    <li><span class="icon" style="color:var(--gray)">✗</span><span>NON fa per te se cerchi risultati rapidi o non riesci a mantenere la costanza</span></li>
+  </ul>
+</div>
+
+<div class="chapter-header reveal"><div class="chapter-num">Capitolo 05</div><div class="chapter-title">GIOCO<br>D'AZZARDO</div><div class="chapter-divider"></div></div>
+<div class="content reveal">
+  <h3>Sì, ne parliamo. Perché esiste.</h3>
+  <p>Il gioco d'azzardo è un metodo di guadagno. Detto questo — con tutta la chiarezza del caso — andiamo avanti. C'è una differenza enorme tra gioco puro (slot, roulette) e gioco con componente di abilità (poker, value betting). Nel primo la matematica è contro di te per definizione. Nel secondo, con studio e disciplina, puoi sviluppare un vantaggio statistico reale.</p>
+  <h3>Per chi ha abilità reale</h3>
+  <ul class="bullets">
+    <li><span class="icon" style="color:var(--green2)">Poker</span><span>Teoria, migliaia di mani, analisi sessioni, bankroll management rigido</span></li>
+    <li><span class="icon" style="color:var(--green2)">Value</span><span>Modelli statistici per trovare quote sottovalutate dai bookmaker</span></li>
+    <li><span class="icon" style="color:var(--green2)">Regola</span><span>Mai rischiare più dell'1-3% del capitale su una singola puntata — chi viola questa regola perde tutto, sempre</span></li>
+  </ul>
+  <h3>La verità senza filtri</h3>
+  <p>Il gioco puro è una tassa sull'ignoranza matematica. Le slot hanno un RTP dell'85-95% — nel lungo periodo perdi sempre, per definizione. Il poker professionistico e il value betting esistono come reddito reale — ma richiedono anni di studio e gestione emotiva di ferro.</p>
+  <div class="warning-box"><span class="w-icon">◈</span><p>Il gioco d'azzardo ha potenziale di dipendenza patologica. Se hai tendenze compulsive questo percorso non fa per te — indipendentemente dall'abilità.</p></div>
+</div>
+
+<div class="chapter-header reveal"><div class="chapter-num">Capitolo 06</div><div class="chapter-title">MENTALITÀ</div><div class="chapter-divider"></div></div>
+<div class="content reveal">
+  <div class="label-tag">In fase di apprendimento</div>
+  <ul class="bullets">
+    <li><span class="icon" style="color:var(--green2)">→</span><span>Sii umile. Non sai ancora. Studia chi ha già fatto il percorso realmente.</span></li>
+    <li><span class="icon" style="color:var(--green2)">→</span><span>Non correre. La fretta brucia capitali e motivazione, quasi sempre insieme.</span></li>
+    <li><span class="icon" style="color:var(--green2)">→</span><span>Accetta le perdite come costo di apprendimento — non come fallimenti personali.</span></li>
+  </ul>
+  <div class="label-tag">In fase operativa</div>
+  <ul class="bullets">
+    <li><span class="icon" style="color:var(--green2)">→</span><span>Sii deciso. Hai un piano — eseguilo. Il dubbio a metà è il modo più rapido per perdere.</span></li>
+    <li><span class="icon" style="color:var(--green2)">→</span><span>Separa le emozioni dalle decisioni. Le emozioni sono informazioni, non istruzioni.</span></li>
+    <li><span class="icon" style="color:var(--green2)">→</span><span>Sii freddo quando le cose vanno male — è lì che si vede chi dura e chi molla.</span></li>
+  </ul>
+  <div class="label-tag">In fase di crescita</div>
+  <ul class="bullets">
+    <li><span class="icon" style="color:var(--green2)">→</span><span>Sii selettivo. Non ogni opportunità merita il tuo tempo.</span></li>
+    <li><span class="icon" style="color:var(--green2)">→</span><span>Scala solo ciò che già funziona. Ottimizza prima di espandere.</span></li>
+    <li><span class="icon" style="color:var(--green2)">→</span><span>Le persone giuste valgono più di qualsiasi strategia.</span></li>
+  </ul>
+  <div class="green-line"></div>
+  <h3>Come fare una proposta che funziona</h3>
+  <ul class="bullets">
+    <li><span class="icon" style="color:var(--green2)">01</span><span><strong style="color:var(--white)">CHIAREZZA</strong> — Cosa offri, cosa chiedi, cosa ci guadagna l'altro. Nessuna ambiguità.</span></li>
+    <li><span class="icon" style="color:var(--green2)">02</span><span><strong style="color:var(--white)">VALORE</strong> — Il beneficio per chi riceve, non il tuo entusiasmo.</span></li>
+    <li><span class="icon" style="color:var(--green2)">03</span><span><strong style="color:var(--white)">URGENZA</strong> — Un motivo reale per decidere adesso. Non manipolativo — concreto.</span></li>
+  </ul>
+  <div class="quote-block"><p>Una proposta che ha bisogno di essere spiegata due volte non è ancora pronta per essere fatta.</p></div>
+  <div class="green-line"></div>
+  <h3>Quando accettare e quando dire no</h3>
+  <div class="label-tag">Accetta se...</div>
+  <ul class="bullets">
+    <li><span class="icon" style="color:var(--green3)">✓</span><span>Il rischio è calcolato sui numeri reali, non solo emotivamente</span></li>
+    <li><span class="icon" style="color:var(--green3)">✓</span><span>L'accordo è chiaro, definito, preferibilmente per iscritto</span></li>
+    <li><span class="icon" style="color:var(--green3)">✓</span><span>La controparte ha un track record verificabile</span></li>
+  </ul>
+  <div class="label-tag">Di' no se...</div>
+  <ul class="bullets">
+    <li><span class="icon" style="color:var(--gray)">✗</span><span>Senti pressione per decidere subito — sempre una bandiera rossa, senza eccezioni</span></li>
+    <li><span class="icon" style="color:var(--gray)">✗</span><span>I numeri non tornano — se non capisci il modello, non entrare</span></li>
+    <li><span class="icon" style="color:var(--gray)">✗</span><span>L'accordo si basa su promesse verbali non verificabili</span></li>
+    <li><span class="icon" style="color:var(--gray)">✗</span><span>Il tuo istinto dice no — l'istinto è la somma di tutte le tue esperienze</span></li>
+  </ul>
+</div>
+
+<div class="chapter-header reveal"><div class="chapter-num">Capitolo 07</div><div class="chapter-title">CONSIGLI<br>DIRETTI</div><div class="chapter-divider"></div></div>
+<div class="content reveal">
+  <ul class="bullets">
+    <li><span class="icon" style="color:var(--green2)">01</span><span>Inizia da uno. La dispersione è il killer numero uno dei potenziali imprenditori — non la mancanza di talento.</span></li>
+    <li><span class="icon" style="color:var(--green2)">02</span><span>Il tuo tempo vale. Ogni ora senza azione è un'ora regalata alla concorrenza.</span></li>
+    <li><span class="icon" style="color:var(--green2)">03</span><span>I soldi seguono il valore. Pensa a quale problema risolvi, per chi, e quanto vale per loro.</span></li>
+    <li><span class="icon" style="color:var(--green2)">04</span><span>Fallire in piccolo è un investimento. Un progetto che perde 200€ insegna più di un corso da 2.000€.</span></li>
+    <li><span class="icon" style="color:var(--green2)">05</span><span>Le persone con cui stai cambiano i tuoi risultati. Non è filosofia — è statistica.</span></li>
+    <li><span class="icon" style="color:var(--green2)">06</span><span>La disciplina batte la motivazione. La motivazione va e viene. La disciplina resta.</span></li>
+    <li><span class="icon" style="color:var(--green2)">07</span><span>Non aspettare il momento giusto. Il momento giusto non esiste. Esiste solo adesso.</span></li>
+  </ul>
+  <div class="quote-block"><p>Chi aspetta le condizioni perfette non semina mai. E chi non semina non ha niente da raccogliere.</p></div>
+</div>
+
+<div id="consulenza" class="section reveal">
+  <div class="section-label">Accesso Esclusivo — Solo Acquirenti</div>
+  <h2>Chiedi prima di <em>agire</em></h2>
+  <div class="lead">Hai acquistato questa guida. Questo ti dà accesso a qualcosa che vale più della guida stessa.</div>
+  <p>Quante volte hai preso una decisione e solo dopo hai pensato: avrei dovuto chiedere prima? Questa sezione esiste per eliminare quel problema.</p>
+  <p>Hai una trattativa in corso? Stai valutando una proposta? Vuoi sapere come impostare una conversazione importante? Invia la tua situazione e ricevi una risposta operativa — non teoria generica, ma indicazione precisa.</p>
+  <h3>Esempi di domande</h3>
+  <ul class="bullets">
+    <li><span class="icon" style="color:var(--green2)">→</span><span>"Mi hanno proposto una partnership al 50/50 — ha senso?"</span></li>
+    <li><span class="icon" style="color:var(--green2)">→</span><span>"Sto per investire 1.500€ in crypto — come mi muovo?"</span></li>
+    <li><span class="icon" style="color:var(--green2)">→</span><span>"Come scrivo questa proposta commerciale senza sembrare disperato?"</span></li>
+    <li><span class="icon" style="color:var(--green2)">→</span><span>"Ho paura di iniziare — cosa faccio concretamente domani?"</span></li>
+    <li><span class="icon" style="color:var(--green2)">→</span><span>"Questo contratto ha clausole strane — come lo leggo?"</span></li>
+  </ul>
+  <div class="warning-box"><span class="w-icon">◈</span><p>L'accesso è personale e non cedibile. Incluso per 12 mesi dall'attivazione. Il link si trova nella email di conferma acquisto.</p></div>
+</div>
+
+<div class="closing reveal">
+  <div class="big-text">ORA<br><span>SAI.</span></div>
+  <p class="sub">Adesso scegli. Tocca a te.</p>
+  <a href="#" class="cta" onclick="openPricing(event)">Scegli il tuo Piano →</a>
+</div>
+</div>
+
+<!-- STICKY CTA -->
+<div class="sticky-cta" id="sticky-cta">
+  <p class="sticky-cta-text" id="sticky-text">Ready to stop guessing? <strong>Unlock the full guide.</strong></p>
+  <a href="#" class="sticky-cta-btn" id="sticky-btn" onclick="openPricing(event)">Choose Your Plan →</a>
+</div>
+
+<!-- ============ PRICING OVERLAY EN ============ -->
+<div id="pricing-en" class="pricing-overlay" style="display:none;">
+  <div class="pricing-inner">
+    <button class="pricing-close" onclick="closePricing()">✕ Close</button>
+    <div class="hero" style="padding-top:4rem;min-height:auto;padding-bottom:2rem;">
+      <p class="hero-eyebrow">Choose your path</p>
+      <h1 style="font-family:var(--display);font-size:clamp(3rem,8vw,6rem);color:var(--white);opacity:1;animation:none;">UNLOCK THE<br><em style="font-family:var(--serif);font-style:italic;color:var(--green2);font-size:0.7em;display:block;">Knowledge</em></h1>
+      <p class="hero-sub" style="opacity:1;animation:none;">One guide, all guides, or everything including the AI advisor.</p>
+    </div>
+    <div class="topic-section">
+      <span class="topic-label">Step 1 — For Base &amp; Mid plans</span>
+      <p class="topic-label-text">Which guide do you want to unlock?</p>
+      <div class="topics-grid">
+        <button class="topic-btn active" onclick="selectTopic(this,'Trading','en')">Trading</button>
+        <button class="topic-btn" onclick="selectTopic(this,'Dropshipping','en')">Dropshipping</button>
+        <button class="topic-btn" onclick="selectTopic(this,'Crypto','en')">Cryptocurrency</button>
+        <button class="topic-btn" onclick="selectTopic(this,'Creator','en')">Personal Brand</button>
+        <button class="topic-btn" onclick="selectTopic(this,'Gambling','en')">Gambling</button>
+      </div>
+      <p class="topic-note">* Premium plan includes all 5 guides automatically</p>
+    </div>
+    <div class="plans-section">
+      <div class="plans-grid">
+        <div class="plan">
+          <p class="plan-tier">Plan 01</p><h2 class="plan-name">BASE</h2>
+          <div class="plan-price"><span class="currency">€</span><span class="amount">37</span></div>
+          <p class="plan-price-note">One-time payment · Lifetime access</p>
+          <div class="plan-divider"></div>
+          <ul class="plan-features">
+            <li><span class="check">◆</span><span><strong>1 guide of your choice</strong> — full in-depth version</span></li>
+            <li><span class="check">◆</span><span>Real mechanics, risks, and process explained step by step</span></li>
+            <li><span class="check">◆</span><span>Lifetime access to your chosen guide</span></li>
+            <li class="muted"><span class="check">—</span><span>AI Imprenditoriale not included</span></li>
+            <li class="muted"><span class="check">—</span><span>Other guides not included</span></li>
+          </ul>
+          <a href="#" class="plan-cta outline" id="en-cta-base">Get Base Plan →</a>
+        </div>
+        <div class="plan featured">
+          <div class="plan-badge">Most Popular</div>
+          <p class="plan-tier">Plan 02</p><h2 class="plan-name">MID</h2>
+          <div class="plan-price"><span class="currency">€</span><span class="amount">97</span></div>
+          <p class="plan-price-note">One-time payment · Lifetime access</p>
+          <div class="plan-divider"></div>
+          <ul class="plan-features">
+            <li><span class="check">◆</span><span><strong>1 guide of your choice</strong> — full in-depth version</span></li>
+            <li><span class="check">◆</span><span>Real mechanics, risks, and process explained step by step</span></li>
+            <li><span class="check">◆</span><span>Lifetime access to your chosen guide</span></li>
+            <li><span class="check">◆</span><span><strong>AI Imprenditoriale</strong> — 12 months of access</span></li>
+            <li><span class="check">◆</span><span>Ask before acting — get real answers before every decision</span></li>
+          </ul>
+          <a href="#" class="plan-cta solid" id="en-cta-mid">Get Mid Plan →</a>
+        </div>
+        <div class="plan">
+          <p class="plan-tier">Plan 03</p><h2 class="plan-name">PREMIUM</h2>
+          <div class="plan-price"><span class="currency">€</span><span class="amount">197</span></div>
+          <p class="plan-price-note">One-time payment · Lifetime access</p>
+          <div class="plan-divider"></div>
+          <ul class="plan-features">
+            <li><span class="check">◆</span><span><strong>All 5 guides</strong> — Trading, Dropshipping, Crypto, Creator, Gambling</span></li>
+            <li><span class="check">◆</span><span>Lifetime access to all guides + future updates</span></li>
+            <li><span class="check">◆</span><span><strong>AI Imprenditoriale</strong> — 12 months of access</span></li>
+            <li><span class="check">◆</span><span>Priority support + early access to new content</span></li>
+          </ul>
+          <a href="#stripe-premium" class="plan-cta solid-green">Get Premium Plan →</a>
+        </div>
+      </div>
+    </div>
+    <div class="comparison">
+      <div class="comparison-title">What's inside each guide</div>
+      <div class="guides-list">
+        <div class="guide-item"><div class="guide-icon">01</div><div><div class="guide-name">Trading</div><div class="guide-sub">Markets, strategy, risk</div></div></div>
+        <div class="guide-item"><div class="guide-icon">02</div><div><div class="guide-name">Dropshipping</div><div class="guide-sub">Products, ads, suppliers</div></div></div>
+        <div class="guide-item"><div class="guide-icon">03</div><div><div class="guide-name">Cryptocurrency</div><div class="guide-sub">Invest vs speculate</div></div></div>
+        <div class="guide-item"><div class="guide-icon">04</div><div><div class="guide-name">Personal Brand</div><div class="guide-sub">Audience, content, money</div></div></div>
+        <div class="guide-item"><div class="guide-icon">05</div><div><div class="guide-name">Gambling</div><div class="guide-sub">Skill vs luck, edge</div></div></div>
+      </div>
+    </div>
+    <div class="faq" style="padding-bottom:2rem;">
+      <h2 class="faq-title">FAQ</h2>
+      <div class="faq-item"><div class="faq-q">How do I access my guide after purchase?<span class="arrow">▼</span></div><div class="faq-a">You'll receive an email immediately after payment with your personal access link.</div></div>
+      <div class="faq-item"><div class="faq-q">Can I upgrade my plan later?<span class="arrow">▼</span></div><div class="faq-a">Yes. You only pay the difference. Contact us after your purchase.</div></div>
+      <div class="faq-item"><div class="faq-q">What is the AI Imprenditoriale?<span class="arrow">▼</span></div><div class="faq-a">An AI with an entrepreneurial, no-nonsense mindset. Ask it real questions before making decisions and get direct, practical answers.</div></div>
+      <div class="faq-item"><div class="faq-q">How long is the AI access valid?<span class="arrow">▼</span></div><div class="faq-a">12 months from activation. Renewable at a discounted rate for existing members.</div></div>
+    </div>
+    <div class="guarantee" style="padding-bottom:3rem;">
+      <div class="guarantee-box">
+        <span class="guarantee-icon">◈</span>
+        <div class="guarantee-title">No fluff. No padding. No wasted pages.</div>
+        <p class="guarantee-text">If you read it and feel you learned nothing new, reach out within 7 days and we'll make it right.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PRICING OVERLAY IT ============ -->
+<div id="pricing-it" class="pricing-overlay" style="display:none;">
+  <div class="pricing-inner">
+    <button class="pricing-close" onclick="closePricing()">✕ Chiudi</button>
+    <div class="hero" style="padding-top:4rem;min-height:auto;padding-bottom:2rem;">
+      <p class="hero-eyebrow">Scegli il tuo percorso</p>
+      <h1 style="font-family:var(--display);font-size:clamp(3rem,8vw,6rem);color:var(--white);opacity:1;animation:none;">SBLOCCA LA<br><em style="font-family:var(--serif);font-style:italic;color:var(--green2);font-size:0.7em;display:block;">Conoscenza</em></h1>
+      <p class="hero-sub" style="opacity:1;animation:none;">Una guida, tutte le guide, o tutto incluso con l'AI consulente.</p>
+    </div>
+    <div class="topic-section">
+      <span class="topic-label">Step 1 — Per i piani Base e Mid</span>
+      <p class="topic-label-text">Quale guida vuoi sbloccare?</p>
+      <div class="topics-grid">
+        <button class="topic-btn active" onclick="selectTopic(this,'Trading','it')">Trading</button>
+        <button class="topic-btn" onclick="selectTopic(this,'Dropshipping','it')">Dropshipping</button>
+        <button class="topic-btn" onclick="selectTopic(this,'Crypto','it')">Criptovalute</button>
+        <button class="topic-btn" onclick="selectTopic(this,'Creator','it')">Personal Brand</button>
+        <button class="topic-btn" onclick="selectTopic(this,'Azzardo','it')">Gioco d'Azzardo</button>
+      </div>
+      <p class="topic-note">* Il piano Premium include automaticamente tutte e 5 le guide</p>
+    </div>
+    <div class="plans-section">
+      <div class="plans-grid">
+        <div class="plan">
+          <p class="plan-tier">Piano 01</p><h2 class="plan-name">BASE</h2>
+          <div class="plan-price"><span class="currency">€</span><span class="amount">37</span></div>
+          <p class="plan-price-note">Pagamento unico · Accesso a vita</p>
+          <div class="plan-divider"></div>
+          <ul class="plan-features">
+            <li><span class="check">◆</span><span><strong>1 guida a tua scelta</strong> — versione completa e approfondita</span></li>
+            <li><span class="check">◆</span><span>Meccaniche reali, rischi e processo spiegati passo per passo</span></li>
+            <li><span class="check">◆</span><span>Accesso a vita alla guida scelta</span></li>
+            <li class="muted"><span class="check">—</span><span>AI Imprenditoriale non inclusa</span></li>
+            <li class="muted"><span class="check">—</span><span>Altre guide non incluse</span></li>
+          </ul>
+          <a href="#" class="plan-cta outline" id="it-cta-base">Scegli il Piano Base →</a>
+        </div>
+        <div class="plan featured">
+          <div class="plan-badge">Più Popolare</div>
+          <p class="plan-tier">Piano 02</p><h2 class="plan-name">MID</h2>
+          <div class="plan-price"><span class="currency">€</span><span class="amount">97</span></div>
+          <p class="plan-price-note">Pagamento unico · Accesso a vita</p>
+          <div class="plan-divider"></div>
+          <ul class="plan-features">
+            <li><span class="check">◆</span><span><strong>1 guida a tua scelta</strong> — versione completa e approfondita</span></li>
+            <li><span class="check">◆</span><span>Meccaniche reali, rischi e processo spiegati passo per passo</span></li>
+            <li><span class="check">◆</span><span>Accesso a vita alla guida scelta</span></li>
+            <li><span class="check">◆</span><span><strong>AI Imprenditoriale</strong> — 12 mesi di accesso</span></li>
+            <li><span class="check">◆</span><span>Chiedi prima di agire — risposte reali prima di ogni decisione</span></li>
+          </ul>
+          <a href="#" class="plan-cta solid" id="it-cta-mid">Scegli il Piano Mid →</a>
+        </div>
+        <div class="plan">
+          <p class="plan-tier">Piano 03</p><h2 class="plan-name">PREMIUM</h2>
+          <div class="plan-price"><span class="currency">€</span><span class="amount">197</span></div>
+          <p class="plan-price-note">Pagamento unico · Accesso a vita</p>
+          <div class="plan-divider"></div>
+          <ul class="plan-features">
+            <li><span class="check">◆</span><span><strong>Tutte e 5 le guide</strong> — Trading, Dropshipping, Crypto, Creator, Azzardo</span></li>
+            <li><span class="check">◆</span><span>Accesso a vita a tutte le guide + aggiornamenti futuri</span></li>
+            <li><span class="check">◆</span><span><strong>AI Imprenditoriale</strong> — 12 mesi di accesso</span></li>
+            <li><span class="check">◆</span><span>Supporto prioritario + accesso anticipato ai nuovi contenuti</span></li>
+          </ul>
+          <a href="#stripe-premium" class="plan-cta solid-green">Scegli il Piano Premium →</a>
+        </div>
+      </div>
+    </div>
+    <div class="comparison">
+      <div class="comparison-title">Cosa contiene ogni guida</div>
+      <div class="guides-list">
+        <div class="guide-item"><div class="guide-icon">01</div><div><div class="guide-name">Trading</div><div class="guide-sub">Mercati, strategia, rischio</div></div></div>
+        <div class="guide-item"><div class="guide-icon">02</div><div><div class="guide-name">Dropshipping</div><div class="guide-sub">Prodotti, ads, fornitori</div></div></div>
+        <div class="guide-item"><div class="guide-icon">03</div><div><div class="guide-name">Criptovalute</div><div class="guide-sub">Investire vs speculare</div></div></div>
+        <div class="guide-item"><div class="guide-icon">04</div><div><div class="guide-name">Personal Brand</div><div class="guide-sub">Audience, contenuti, guadagno</div></div></div>
+        <div class="guide-item"><div class="guide-icon">05</div><div><div class="guide-name">Gioco d'Azzardo</div><div class="guide-sub">Abilità vs fortuna, edge</div></div></div>
+      </div>
+    </div>
+    <div class="faq" style="padding-bottom:2rem;">
+      <h2 class="faq-title">FAQ</h2>
+      <div class="faq-item"><div class="faq-q">Come accedo alla guida dopo l'acquisto?<span class="arrow">▼</span></div><div class="faq-a">Riceverai un'email immediatamente dopo il pagamento con il tuo link di accesso personale.</div></div>
+      <div class="faq-item"><div class="faq-q">Posso fare l'upgrade del piano in seguito?<span class="arrow">▼</span></div><div class="faq-a">Sì. Paghi solo la differenza. Contattaci dopo l'acquisto.</div></div>
+      <div class="faq-item"><div class="faq-q">Cos'è l'AI Imprenditoriale?<span class="arrow">▼</span></div><div class="faq-a">Un'AI con mentalità imprenditoriale, diretta e senza fronzoli. Le fai domande reali e ti dà risposte pratiche e operative.</div></div>
+      <div class="faq-item"><div class="faq-q">Per quanto tempo è valido l'accesso all'AI?<span class="arrow">▼</span></div><div class="faq-a">12 mesi dalla data di attivazione. Rinnovabile a tariffa scontata per i membri esistenti.</div></div>
+    </div>
+    <div class="guarantee" style="padding-bottom:3rem;">
+      <div class="guarantee-box">
+        <span class="guarantee-icon">◈</span>
+        <div class="guarantee-title">Zero riempitivo. Zero pagine sprecate.</div>
+        <p class="guarantee-text">Se leggi e senti di non aver imparato niente di nuovo, scrivici entro 7 giorni e sistemiamo tutto.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const LANG = {
+  en: {
+    title:"GRYND — The Guide",logo:"<span style='color:var(--green2)'>G</span><span style='color:var(--white)'>R</span><span style='color:var(--green2)'>Y</span><span style='color:var(--white)'>N</span><span style='color:var(--green2)'>D</span>",coverTag:"Restricted Document — Limited Access",coverSub:"The guide nobody had the courage to write.",coverCta:"Choose Your Plan →",pillBrand:"Personal Brand",pillGambling:"Gambling",scrollText:"Scroll",zpScrollLabel:"Scroll",
+    navLinks:'<li><a href="#intro">Intro</a></li><li><a href="#trading">Trading</a></li><li><a href="#dropshipping">Dropshipping</a></li><li><a href="#crypto">Crypto</a></li><li><a href="#creator">Creator</a></li><li><a href="#gambling">Gambling</a></li><li><a href="#consulting">Consulting</a></li>',
+    stickyText:'Ready to stop guessing? <strong>Unlock the full guide.</strong>',stickyBtn:"Choose Your Plan →",
+    tickerFallback:["Bitcoin remains institutional investors' key asset in 2025","Global dropshipping market surpasses $500 billion","Ethereum protocol update: improved speed and lower fees","Meta Ads: new e-commerce campaign tools launched","TikTok Shop expands to Europe: major opportunity for sellers","Algorithmic trading represents 70% of global volumes"],
+  },
+  it: {
+    title:"GRYND — La Guida",logo:"<span style='color:var(--green2)'>G</span><span style='color:var(--white)'>R</span><span style='color:var(--green2)'>Y</span><span style='color:var(--white)'>N</span><span style='color:var(--green2)'>D</span>",coverTag:"Documento Riservato — Accesso Limitato",coverSub:"La guida che nessuno aveva il coraggio di scrivere.",coverCta:"Scegli il tuo Piano →",pillBrand:"Personal Brand",pillGambling:"Azzardo",scrollText:"Scorri",zpScrollLabel:"Scorri",
+    navLinks:'<li><a href="#intro-it">Intro</a></li><li><a href="#trading">Trading</a></li><li><a href="#dropshipping">Dropshipping</a></li><li><a href="#crypto">Crypto</a></li><li><a href="#creator">Creator</a></li><li><a href="#gambling">Azzardo</a></li><li><a href="#consulenza">Consulenza</a></li>',
+    stickyText:'Pronto a smettere di girare in tondo? <strong>Sblocca la guida completa.</strong>',stickyBtn:"Scegli il tuo Piano →",
+    tickerFallback:["Bitcoin rimane l'asset di riferimento degli investitori istituzionali","Il mercato globale del dropshipping supera i 500 miliardi","Ethereum aggiorna il protocollo: velocità migliorate","Meta Ads: nuovi strumenti per campagne e-commerce","TikTok Shop si espande in Europa: opportunità per i seller","Il trading algoritmico rappresenta il 70% dei volumi globali"],
+  }
+};
+
+let currentLang = localStorage.getItem('lang') || 'en';
+
+function setLang(lang) {
+  currentLang = lang;
+  const t = LANG[lang];
+  document.getElementById('page-title').textContent = t.title;
+  document.documentElement.lang = lang;
+  document.getElementById('nav-logo').innerHTML = t.logo;
+  document.getElementById('nav-links').innerHTML = t.navLinks;
+  const h1en = document.getElementById('cover-h1-en');
+  const h1it = document.getElementById('cover-h1-it');
+  if (h1en && h1it) {
+    h1en.hidden = lang !== 'en';
+    h1it.hidden = lang !== 'it';
+  }
+  document.getElementById('cover-tag').textContent = t.coverTag;
+  document.getElementById('cover-sub').textContent = t.coverSub;
+  document.getElementById('cover-cta').textContent = t.coverCta;
+  document.getElementById('pill-brand').textContent = t.pillBrand;
+  document.getElementById('pill-gambling').textContent = t.pillGambling;
+  document.getElementById('scroll-text').textContent = t.scrollText;
+  document.getElementById('sticky-text').innerHTML = t.stickyText;
+  document.getElementById('sticky-btn').textContent = t.stickyBtn;
+  const zpLabel = document.getElementById('zp-scroll-label');
+  if (zpLabel) zpLabel.textContent = t.zpScrollLabel;
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.textContent === lang.toUpperCase()));
+  document.getElementById('en').classList.toggle('active', lang === 'en');
+  document.getElementById('it').classList.toggle('active', lang === 'it');
+  const capEN = document.getElementById('zp-cap-en');
+  const capIT = document.getElementById('zp-cap-it');
+  if (capEN) capEN.style.display = lang === 'en' ? '' : 'none';
+  if (capIT) capIT.style.display = lang === 'it' ? '' : 'none';
+  if (typeof updateZPLang === 'function') updateZPLang(lang);
+  localStorage.setItem('lang', lang);
+  loadNews();
+}
+
+async function loadNews() {
+  const track = document.getElementById('ticker-track');
+  try {
+    const res = await fetch('https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent('https://cointelegraph.com/rss') + '&count=15');
+    const data = await res.json();
+    if (data.status === 'ok' && data.items.length > 0) {
+      const locale = currentLang === 'it' ? 'it-IT' : 'en-US';
+      let html = data.items.map(item => {
+        const time = new Date(item.pubDate).toLocaleTimeString(locale, {hour:'2-digit',minute:'2-digit'});
+        return '<a href="'+item.link+'" target="_blank">['+time+'] '+item.title+'</a><span class="ticker-sep">◆</span>';
+      }).join('');
+      track.innerHTML = html + html;
+      track.style.animation = 'tickerScroll ' + (track.scrollWidth/80) + 's linear infinite';
+    } else { fallback(); }
+  } catch(e) { fallback(); }
+}
+
+function fallback() {
+  const track = document.getElementById('ticker-track');
+  const news = LANG[currentLang].tickerFallback;
+  let html = news.map(n => '<span>'+n+'</span><span class="ticker-sep">◆</span>').join('');
+  track.innerHTML = html + html;
+}
+
+setLang(currentLang);
+setInterval(loadNews, 600000);
+
+/* ============ Hero letter fly -> pills (GRYND). Lettere cadono nei riquadri. ============ */
+(function () {
+  var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var ran = false;
+  var ioCover = null;
+  var ioH1 = null;
+  var scrollTick = false;
+
+  // G->Gambling(verde), R->dRopshipping(bianco), Y->crYpto(verde), N->persoNal brand(bianco), D->traDing(verde)
+  var LETTER_MAP = [
+    { glyph:'G', target:'pill-gambling',     targetLetter:'pill-gambling-letter',     hexColor:'#52A86E' },
+    { glyph:'R', target:'pill-dropshipping', targetLetter:'pill-dropshipping-letter', hexColor:'#E8E8E8' },
+    { glyph:'Y', target:'pill-crypto',       targetLetter:'pill-crypto-letter',       hexColor:'#52A86E' },
+    { glyph:'N', target:'pill-brand',        targetLetter:'pill-brand-letter',        hexColor:'#E8E8E8' },
+    { glyph:'D', target:'pill-trading',      targetLetter:'pill-trading-letter',      hexColor:'#52A86E' }
+  ];
+
+  function viewportHeight() {
+    var vv = window.visualViewport;
+    return vv && vv.height > 0 ? vv.height : window.innerHeight;
+  }
+
+  function teardownListeners() {
+    window.removeEventListener('scroll', onScrollOrResize, { passive: true });
+    window.removeEventListener('resize', onScrollOrResize);
+    var vv = window.visualViewport;
+    if (vv) {
+      vv.removeEventListener('resize', onScrollOrResize);
+      vv.removeEventListener('scroll', onScrollOrResize);
+    }
+    if (ioCover) { ioCover.disconnect(); ioCover = null; }
+    if (ioH1)    { ioH1.disconnect();    ioH1 = null;    }
+  }
+
+  function visibleHeroStack() {
+    var en = document.getElementById('cover-h1-en');
+    var it = document.getElementById('cover-h1-it');
+    if (!en || !it) return null;
+    return en.hidden ? it : en;
+  }
+
+  function visiblePrimaryRow() {
+    var stack = visibleHeroStack();
+    return stack ? stack.querySelector('.cover-title-line--primary') : null;
+  }
+
+  function visibleLetters() {
+    var row = visiblePrimaryRow();
+    if (!row) return [];
+    return Array.prototype.slice.call(row.querySelectorAll('.grynd-letter[data-grynd-target]'));
+  }
+
+  function coverShouldTriggerFly(cover) {
+    var vh = viewportHeight();
+    var r  = cover.getBoundingClientRect();
+    var sy = window.scrollY || window.pageYOffset || 0;
+    if (sy < 12) return false;
+    return r.top < vh * 0.48 || r.bottom < vh * 0.9;
+  }
+
+  function lettersPreflightOk(letters) {
+    if (letters.length !== 5) return false;
+    return letters.every(function (l) {
+      var tid = l.dataset.gryndTarget || l.getAttribute('data-grynd-target');
+      return tid && document.getElementById(tid);
+    });
+  }
+
+  function tryFire() {
+    if (ran) return;
+    var cover   = document.querySelector('.cover');
+    var letters = visibleLetters();
+    if (!cover || !lettersPreflightOk(letters)) return;
+    if (!coverShouldTriggerFly(cover))          return;
+    if (prefersReduced) { ran = true; teardownListeners(); return; }
+
+    ran = true;
+    teardownListeners();
+
+    var primaryRow = visiblePrimaryRow();
+    var DUR     = 900;   // ms volo
+    var STAGGER = 80;    // ms tra lettere
+    var EASE    = 'cubic-bezier(0.4, 0, 0.2, 1)';
+
+    // 1. Mappa glifo -> elemento lettera
+    var glyphMap = {};
+    letters.forEach(function(l) { glyphMap[l.textContent.trim()] = l; });
+
+    // 2. Leggi TUTTE le rect in un unico frame sincronizzato (evita reflow multipli)
+    var items = LETTER_MAP.map(function(m, i) {
+      var letter      = glyphMap[m.glyph];
+      var targetPill  = document.getElementById(m.target);
+      var targetLetEl = document.getElementById(m.targetLetter);
+      if (!letter || !targetPill || !targetLetEl) return null;
+
+      var lr   = letter.getBoundingClientRect();
+      var tl   = targetLetEl.getBoundingClientRect();
+      var cs   = window.getComputedStyle(letter);
+      var tlCs = window.getComputedStyle(targetLetEl);
+
+      var fromSize = parseFloat(cs.fontSize) || 80;
+      var toSize   = parseFloat(tlCs.fontSize) || 10;
+      var scale    = toSize / fromSize;
+      if (!scale || isNaN(scale) || scale <= 0) scale = 0.12;
+
+      return {
+        m:          m,
+        i:          i,
+        letter:     letter,
+        targetLetEl:targetLetEl,
+        targetPill: targetPill,
+        // Posizione di partenza (centro lettera GRYND in viewport)
+        startX:  lr.left + lr.width  / 2,
+        startY:  lr.top  + lr.height / 2,
+        // Posizione di arrivo (centro lettera target nel pill in viewport)
+        destX:   tl.left + tl.width  / 2,
+        destY:   tl.top  + tl.height / 2,
+        scale:   scale,
+        fontSize:cs.fontSize,
+        fontFamily:cs.fontFamily,
+        fontWeight:cs.fontWeight
+      };
+    }).filter(Boolean);
+
+    // 3. Nascondi le lettere originali e crea i fly-letter tutti insieme
+    items.forEach(function(item) {
+      item.letter.style.visibility = 'hidden';
+
+      var fly = document.createElement('span');
+      fly.className       = 'grynd-fly-letter';
+      fly.textContent     = item.m.glyph;
+      fly.setAttribute('aria-hidden', 'true');
+      // Posiziona esattamente sopra la lettera originale
+      fly.style.cssText =
+        'position:fixed;' +
+        'left:' + item.startX + 'px;' +
+        'top:'  + item.startY + 'px;' +
+        'font-size:'   + item.fontSize + ';' +
+        'font-family:' + item.fontFamily + ';' +
+        'font-weight:' + item.fontWeight + ';' +
+        'color:'       + item.m.hexColor + ';' +
+        'opacity:1;' +
+        'transform:translate(-50%,-50%) scale(1);' +
+        '-webkit-transform:translate(-50%,-50%) scale(1);' +
+        'transition:none;' +
+        'z-index:600;' +
+        'pointer-events:none;' +
+        'line-height:1;' +
+        'will-change:transform;';
+      document.body.appendChild(fly);
+      item.fly = fly;
+    });
+
+    // 4. In un unico requestAnimationFrame: attiva tutte le transizioni con stagger via delay
+    window.requestAnimationFrame(function() {
+      // Forza reflow su tutti insieme
+      items.forEach(function(item) { item.fly.offsetHeight; });
+
+      window.requestAnimationFrame(function() {
+        items.forEach(function(item) {
+          var dx    = item.destX - item.startX;
+          var dy    = item.destY - item.startY;
+          var delay = item.i * STAGGER;
+          var tf    = 'translate(calc(-50% + ' + dx + 'px), calc(-50% + ' + dy + 'px)) scale(' + item.scale + ')';
+
+          item.fly.style.transition =
+            'transform ' + DUR + 'ms ' + EASE + ' ' + delay + 'ms,' +
+            '-webkit-transform ' + DUR + 'ms ' + EASE + ' ' + delay + 'ms';
+
+          // Forza secondo reflow per triggerare la transizione
+          item.fly.offsetHeight;
+          item.fly.style.transform = tf;
+          item.fly.style.webkitTransform = tf;
+
+          // Quando arriva: colora lettera nel pill, rimuovi fly
+          (function(fly, targetLetEl, targetPill, hexColor) {
+            var done = false;
+            function land() {
+              if (done) return;
+              done = true;
+              targetLetEl.style.setProperty('color', hexColor, 'important');
+              targetLetEl.classList.add('pill-letter-landed');
+              targetPill.classList.add('pill-activated');
+              if (fly.parentNode) fly.parentNode.removeChild(fly);
+            }
+            fly.addEventListener('transitionend', function onEnd(ev) {
+              if (ev.propertyName !== 'transform' && ev.propertyName !== '-webkit-transform') return;
+              fly.removeEventListener('transitionend', onEnd);
+              land();
+            });
+            // Fallback sicuro
+            window.setTimeout(land, delay + DUR + 200);
+          })(item.fly, item.targetLetEl, item.targetPill, item.m.hexColor);
+        });
+      });
+    });
+
+    // 5. Dopo tutto: ripristina lettere originali e marca done
+    var totalMs = (items.length - 1) * STAGGER + DUR + 600;
+    window.setTimeout(function () {
+      if (primaryRow) primaryRow.classList.add('hero-grynd-done');
+      letters.forEach(function (el) { el.style.visibility = ''; });
+    }, totalMs);
+  }
+
+  function onScrollOrResize() {
+    if (scrollTick) return;
+    scrollTick = true;
+    window.requestAnimationFrame(function () {
+      scrollTick = false;
+      tryFire();
+    });
+  }
+
+  function armObserversAndListeners() {
+    var coverEl = document.querySelector('.cover');
+    var h1El    = document.getElementById('cover-h1');
+    if (coverEl) {
+      ioCover = new IntersectionObserver(onScrollOrResize, {
+        root: null,
+        threshold: [0,0.08,0.2,0.35,0.5,0.65,0.85,1],
+        rootMargin: '0px 0px -6% 0px'
+      });
+      ioCover.observe(coverEl);
+    }
+    if (h1El) {
+      ioH1 = new IntersectionObserver(onScrollOrResize, {
+        root: null,
+        threshold: [0,0.15,0.35,0.55,0.75,1]
+      });
+      ioH1.observe(h1El);
+    }
+    window.addEventListener('scroll', onScrollOrResize, { passive: true });
+    window.addEventListener('resize', onScrollOrResize);
+    var vv = window.visualViewport;
+    if (vv) {
+      vv.addEventListener('resize', onScrollOrResize);
+      vv.addEventListener('scroll', onScrollOrResize);
+    }
+  }
+
+  if (!prefersReduced) { armObserversAndListeners(); }
+
+  function boot() {
+    onScrollOrResize();
+    window.setTimeout(onScrollOrResize, 120);
+    window.setTimeout(onScrollOrResize, 450);
+  }
+
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(boot).catch(boot);
+  } else {
+    window.requestAnimationFrame(boot);
+  }
+})();
+
+
+/* ============ SCROLL & PROGRESS ============ */
+window.addEventListener('scroll', () => {
+  const s = window.scrollY, h = document.documentElement.scrollHeight - window.innerHeight;
+  document.getElementById('progress').style.width = (s/h*100) + '%';
+  document.getElementById('sticky-cta').classList.toggle('visible', s > 400);
+  if (!zpTicking) { requestAnimationFrame(updateZP); zpTicking = true; }
+}, {passive:true});
+
+/* ============ REVEAL ON SCROLL ============ */
+const reveals = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach((e,i) => { if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*80);obs.unobserve(e.target);} });
+}, {threshold:0.08});
+reveals.forEach(el => obs.observe(el));
+
+/* ============ PRICING ============ */
+function openPricing(e) {
+  if(e) e.preventDefault();
+  const lang = currentLang;
+  document.getElementById('pricing-en').style.display = lang==='en'?'block':'none';
+  document.getElementById('pricing-it').style.display = lang==='it'?'block':'none';
+  setTimeout(()=>{
+    document.getElementById('pricing-'+lang).classList.add('open');
+    document.body.style.overflow='hidden';
+  },10);
+}
+
+function closePricing() {
+  ['en','it'].forEach(l=>{
+    const el = document.getElementById('pricing-'+l);
+    el.classList.remove('open');
+    setTimeout(()=>{ el.style.display='none'; },400);
+  });
+  document.body.style.overflow='';
+}
+
+const stripeLinks = {
+  'Trading':{'base':'#stripe-trading-base','mid':'#stripe-trading-mid'},
+  'Dropshipping':{'base':'#stripe-dropshipping-base','mid':'#stripe-dropshipping-mid'},
+  'Crypto':{'base':'#stripe-crypto-base','mid':'#stripe-crypto-mid'},
+  'Creator':{'base':'#stripe-creator-base','mid':'#stripe-creator-mid'},
+  'Gambling':{'base':'#stripe-gambling-base','mid':'#stripe-gambling-mid'},
+  'Azzardo':{'base':'#stripe-azzardo-base','mid':'#stripe-azzardo-mid'},
+  'Criptovalute':{'base':'#stripe-crypto-base','mid':'#stripe-crypto-mid'},
+};
+
+function selectTopic(btn, topic, lang) {
+  btn.closest('.topics-grid').querySelectorAll('.topic-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  const links = stripeLinks[topic];
+  if(links) {
+    const base = document.getElementById(lang+'-cta-base');
+    const mid = document.getElementById(lang+'-cta-mid');
+    if(base) base.href = links.base;
+    if(mid) mid.href = links.mid;
+  }
+}
+
+document.addEventListener('click', e=>{
+  if(e.target.closest('.faq-item')) {
+    const item = e.target.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    item.closest('.faq').querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+    if(!isOpen) item.classList.add('open');
+  }
+});
+
+document.addEventListener('keydown', e=>{ if(e.key==='Escape') closePricing(); });
+
+/* ============ ZOOM PARALLAX ENGINE ============ */
+const ZP_IMAGES = [
+  { srcEN:'images/image-01.jpg', srcIT:'images/image-01.jpg', style:'top:37.5%;left:37.5%;width:25%;height:25%;', scaleEnd:4 },
+  { src:'images/image-02.jpg',          style:'top:5%;left:33%;width:35%;height:30%;',   scaleEnd:5 },
+  { src:'images/image-03.jpg',            style:'top:15%;left:8%;width:20%;height:45%;',   scaleEnd:6 },
+  { src:'images/image-04.jpg',    style:'top:37.5%;left:63%;width:25%;height:25%;', scaleEnd:5 },
+  { src:'images/image-05.jpg',      style:'top:58%;left:10%;width:52%;height:25%;',  scaleEnd:8 },
+  { src:'images/image-06.jpg',    style:'top:53%;left:65%;width:15%;height:15%;',  scaleEnd:9 }
+];
+
+(function buildZP() {
+  const frame = document.getElementById('zp-frame');
+  if (!frame) return;
+  ZP_IMAGES.forEach((img, i) => {
+    const layer = document.createElement('div');
+    layer.className = 'zp-img-layer';
+    layer.dataset.zpIdx = i;
+    const box = document.createElement('div');
+    box.className = 'zp-img-box';
+    box.style.cssText = img.style;
+    const el = document.createElement('img');
+    if (img.srcEN) {
+      el.src = currentLang === 'it' ? img.srcIT : img.srcEN;
+      el.dataset.srcen = img.srcEN;
+      el.dataset.srcit = img.srcIT;
+      el.classList.add('zp-bilingual');
+    } else {
+      el.src = img.src;
+    }
+    el.alt = '';
+    el.loading = i === 0 ? 'eager' : 'lazy';
+    el.decoding = 'async';
+    box.appendChild(el);
+    layer.appendChild(box);
+    frame.appendChild(layer);
+  });
+})();
+
+function updateZPLang(lang) {
+  document.querySelectorAll('.zp-bilingual').forEach(el => {
+    el.src = lang === 'it' ? el.dataset.srcit : el.dataset.srcen;
+  });
+}
+
+let zpTicking = false;
+
+function updateZP() {
+  const section = document.getElementById('zp-section');
+  const indicator = document.getElementById('zp-scroll-ind');
+  const caption = document.getElementById('zp-caption');
+  const frame = document.getElementById('zp-frame');
+  if (!section || !frame) { zpTicking = false; return; }
+  const rect = section.getBoundingClientRect();
+  const total = section.offsetHeight - window.innerHeight;
+  const scrolled = -rect.top;
+  const t = Math.max(0, Math.min(1, scrolled / total));
+  if (indicator) indicator.classList.toggle('hidden', t > 0.05);
+  if (caption) caption.style.opacity = Math.max(0, 1 - t * 3.5).toFixed(3);
+  frame.querySelectorAll('.zp-img-layer').forEach((layer, i) => {
+    const s1 = ZP_IMAGES[i] ? ZP_IMAGES[i].scaleEnd : 4;
+    const scale = 1 + (s1 - 1) * t;
+    layer.style.transform = 'scale(' + scale.toFixed(4) + ')';
+  });
+  zpTicking = false;
+}
+</script>
+</body>
+</html>

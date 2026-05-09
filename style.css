@@ -43,8 +43,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;height:60px;padding:0 2rem;d
 .cover-topics{display:flex;flex-wrap:wrap;gap:0.6rem;justify-content:center;margin-top:2.5rem;opacity:0;animation:fadeUp 0.8s 0.8s ease forwards;}
 .topic-pill{font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--green2);border:1px solid rgba(82,168,110,0.3);padding:0.4rem 1rem;}
 /* Lettere target nei pill: bianche per R e N, verdi per G Y D */
-#pill-dropshipping-letter,#pill-brand-letter{color:var(--white)!important;}
-#pill-trading-letter,#pill-crypto-letter,#pill-gambling-letter{color:var(--green2)!important;}
+#pill-trading-letter,#pill-dropshipping-letter,#pill-crypto-letter,#pill-brand-letter,#pill-gambling-letter{color:var(--white)!important;}
 .cover-cta{display:inline-flex;align-items:center;gap:0.6rem;background:var(--green2);color:#000;font-family:var(--sans);font-size:0.7rem;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;text-decoration:none;padding:1rem 2.5rem;margin-top:2.5rem;opacity:0;animation:fadeUp 0.8s 1s ease forwards;transition:background 0.2s,transform 0.2s;}
 .cover-cta:hover{background:var(--green3);transform:translateY(-2px);}
 .cover-cta-note{font-size:0.65rem;color:var(--gray);margin-top:0.8rem;opacity:0;animation:fadeIn 0.8s 1.2s ease forwards;}

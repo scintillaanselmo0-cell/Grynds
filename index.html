@@ -726,7 +726,7 @@ const LANG = {
     tickerFallback:["Bitcoin remains institutional investors' key asset in 2025","Global dropshipping market surpasses $500 billion","Ethereum protocol update: improved speed and lower fees","Meta Ads: new e-commerce campaign tools launched","TikTok Shop expands to Europe: major opportunity for sellers","Algorithmic trading represents 70% of global volumes"],
   },
   it: {
-    title:"GRYND — La Guida",logo:"<span style='color:var(--green2)'>G</span><span style='color:var(--white)'>R</span><span style='color:var(--green2)'>Y</span><span style='color:var(--white)'>N</span><span style='color:var(--green2)'>D</span>",coverTag:"Documento Riservato — Accesso Limitato",coverSub:"La guida che nessuno aveva il coraggio di scrivere.",coverCta:"Scegli il tuo Piano →",pillBrand:"Personal Brand",pillGambling:"Azzardo",scrollText:"Scorri",zpScrollLabel:"Scorri",
+    title:"GRYND — La Guida",logo:"<span style='color:var(--green2)'>G</span><span style='color:var(--white)'>R</span><span style='color:var(--green2)'>Y</span><span style='color:var(--white)'>N</span><span style='color:var(--green2)'>D</span>",coverTag:"Documento Riservato — Accesso Limitato",coverSub:"La guida che nessuno aveva il coraggio di scrivere.",coverCta:"Scegli il tuo Piano →",pillBrand:"Personal Brand",pillGambling:"Gambling",scrollText:"Scorri",zpScrollLabel:"Scorri",
     navLinks:'<li><a href="#intro-it">Intro</a></li><li><a href="#trading">Trading</a></li><li><a href="#dropshipping">Dropshipping</a></li><li><a href="#crypto">Crypto</a></li><li><a href="#creator">Creator</a></li><li><a href="#gambling">Azzardo</a></li><li><a href="#consulenza">Consulenza</a></li>',
     stickyText:'Pronto a smettere di girare in tondo? <strong>Sblocca la guida completa.</strong>',stickyBtn:"Scegli il tuo Piano →",
     tickerFallback:["Bitcoin rimane l'asset di riferimento degli investitori istituzionali","Il mercato globale del dropshipping supera i 500 miliardi","Ethereum aggiorna il protocollo: velocità migliorate","Meta Ads: nuovi strumenti per campagne e-commerce","TikTok Shop si espande in Europa: opportunità per i seller","Il trading algoritmico rappresenta il 70% dei volumi globali"],
@@ -751,8 +751,13 @@ function setLang(lang) {
   document.getElementById('cover-tag').textContent = t.coverTag;
   document.getElementById('cover-sub').textContent = t.coverSub;
   document.getElementById('cover-cta').textContent = t.coverCta;
+  // Pill brand: sempre "Personal Brand" con N bianca (uguale in EN e IT)
   document.getElementById('pill-brand').innerHTML = 'Personal Bra<span class="pill-target-letter" id="pill-brand-letter">n</span>d';
-  document.getElementById('pill-gambling').innerHTML = '<span class="pill-target-letter" id="pill-gambling-letter">G</span>' + (t.pillGambling || 'Gambling').slice(1);
+  document.getElementById('pill-gambling').innerHTML = '<span class="pill-target-letter" id="pill-gambling-letter">G</span>ambling';
+  // Ripristina anche trading, crypto, dropshipping con le lettere colorate
+  document.getElementById('pill-trading').innerHTML = 'Tra<span class="pill-target-letter" id="pill-trading-letter">d</span>ing';
+  document.getElementById('pill-dropshipping').innerHTML = 'D<span class="pill-target-letter" id="pill-dropshipping-letter">r</span>opshipping';
+  document.getElementById('pill-crypto').innerHTML = 'Cr<span class="pill-target-letter" id="pill-crypto-letter">y</span>pto';
   document.getElementById('scroll-text').textContent = t.scrollText;
   document.getElementById('sticky-text').innerHTML = t.stickyText;
   document.getElementById('sticky-btn').textContent = t.stickyBtn;

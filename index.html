@@ -805,7 +805,6 @@ setInterval(loadNews, 600000);
   var ioH1 = null;
   var scrollTick = false;
 
-  // G->Gambling(verde), R->dRopshipping(bianco), Y->crYpto(verde), N->persoNal brand(bianco), D->traDing(verde)
   var LETTER_MAP = [
     { glyph:'G', target:'pill-gambling',     targetLetter:'pill-gambling-letter',     hexColor:'#52A86E' },
     { glyph:'R', target:'pill-dropshipping', targetLetter:'pill-dropshipping-letter', hexColor:'#E8E8E8' },
@@ -865,6 +864,46 @@ setInterval(loadNews, 600000);
     });
   }
 
+  /* Ritorna il centro in viewport di un elemento.
+     Se la rect e' zero (elemento inline non misurato), usa il parent. */
+  function getCenter(el) {
+    var r = el.getBoundingClientRect();
+    // Se la rect e' valida (larghezza > 0) usala
+    if (r.width > 0 && r.height > 0) {
+      return { x: r.left + r.width / 2, y: r.top + r.height / 2, fontSize: null, r: r };
+    }
+    // Fallback: crea un clone temporaneo inline-block per misurarlo
+    var clone = document.createElement('span');
+    clone.textContent = el.textContent;
+    var cs = window.getComputedStyle(el);
+    clone.style.cssText =
+      'position:fixed;visibility:hidden;pointer-events:none;' +
+      'font-size:' + cs.fontSize + ';' +
+      'font-family:' + cs.fontFamily + ';' +
+      'font-weight:' + cs.fontWeight + ';' +
+      'display:inline-block;';
+    // Inseriscilo accanto all'elemento originale
+    el.parentNode.insertBefore(clone, el.nextSibling);
+    var cr = clone.getBoundingClientRect();
+    // Usa la posizione del parent per Y, e del clone per le dimensioni
+    var pr = el.parentNode.getBoundingClientRect();
+    el.parentNode.removeChild(clone);
+    // Se ancora zero usa il centro del parent
+    if (cr.width === 0) {
+      return { x: pr.left + pr.width / 2, y: pr.top + pr.height / 2, fontSize: cs.fontSize, r: pr };
+    }
+    // Ricostruisci la posizione X stimando la posizione della lettera nel parent
+    // usando offsetLeft se disponibile
+    var offsetX = el.offsetLeft || 0;
+    var offsetY = el.offsetTop  || 0;
+    return {
+      x: pr.left + offsetX + cr.width / 2,
+      y: pr.top  + offsetY + cr.height / 2,
+      fontSize: cs.fontSize,
+      r: { width: cr.width, height: cr.height }
+    };
+  }
+
   function tryFire() {
     if (ran) return;
     var cover   = document.querySelector('.cover');
@@ -877,64 +916,64 @@ setInterval(loadNews, 600000);
     teardownListeners();
 
     var primaryRow = visiblePrimaryRow();
-    var DUR     = 900;   // ms volo
-    var STAGGER = 80;    // ms tra lettere
+    var DUR     = 900;
+    var STAGGER = 80;
     var EASE    = 'cubic-bezier(0.4, 0, 0.2, 1)';
 
-    // 1. Mappa glifo -> elemento lettera
     var glyphMap = {};
     letters.forEach(function(l) { glyphMap[l.textContent.trim()] = l; });
 
-    // 2. Leggi TUTTE le rect in un unico frame sincronizzato (evita reflow multipli)
+    // Leggi tutte le rect in un unico batch
     var items = LETTER_MAP.map(function(m, i) {
       var letter      = glyphMap[m.glyph];
       var targetPill  = document.getElementById(m.target);
       var targetLetEl = document.getElementById(m.targetLetter);
       if (!letter || !targetPill || !targetLetEl) return null;
 
-      var lr   = letter.getBoundingClientRect();
-      var tl   = targetLetEl.getBoundingClientRect();
-      var cs   = window.getComputedStyle(letter);
-      var tlCs = window.getComputedStyle(targetLetEl);
-
+      var cs       = window.getComputedStyle(letter);
       var fromSize = parseFloat(cs.fontSize) || 80;
+
+      // Centro lettera GRYND (con fallback per rect vuote)
+      var start    = getCenter(letter);
+
+      // Centro lettera target nel pill
+      var tlCs     = window.getComputedStyle(targetLetEl);
       var toSize   = parseFloat(tlCs.fontSize) || 10;
-      var scale    = toSize / fromSize;
+      var dest     = getCenter(targetLetEl);
+
+      var scale = toSize / fromSize;
       if (!scale || isNaN(scale) || scale <= 0) scale = 0.12;
 
       return {
-        m:          m,
-        i:          i,
-        letter:     letter,
-        targetLetEl:targetLetEl,
-        targetPill: targetPill,
-        // Posizione di partenza (centro lettera GRYND in viewport)
-        startX:  lr.left + lr.width  / 2,
-        startY:  lr.top  + lr.height / 2,
-        // Posizione di arrivo (centro lettera target nel pill in viewport)
-        destX:   tl.left + tl.width  / 2,
-        destY:   tl.top  + tl.height / 2,
-        scale:   scale,
-        fontSize:cs.fontSize,
-        fontFamily:cs.fontFamily,
-        fontWeight:cs.fontWeight
+        m:           m,
+        i:           i,
+        letter:      letter,
+        targetLetEl: targetLetEl,
+        targetPill:  targetPill,
+        startX:      start.x,
+        startY:      start.y,
+        destX:       dest.x,
+        destY:       dest.y,
+        scale:       scale,
+        fontSize:    cs.fontSize,
+        fontFamily:  cs.fontFamily,
+        fontWeight:  cs.fontWeight
       };
     }).filter(Boolean);
 
-    // 3. Nascondi le lettere originali e crea i fly-letter tutti insieme
+    // Nascondi originali e crea fly-letter tutti insieme
     items.forEach(function(item) {
       item.letter.style.visibility = 'hidden';
 
       var fly = document.createElement('span');
-      fly.className       = 'grynd-fly-letter';
-      fly.textContent     = item.m.glyph;
+      fly.className   = 'grynd-fly-letter';
+      fly.textContent = item.m.glyph;
       fly.setAttribute('aria-hidden', 'true');
-      // Posiziona esattamente sopra la lettera originale
       fly.style.cssText =
         'position:fixed;' +
         'left:' + item.startX + 'px;' +
         'top:'  + item.startY + 'px;' +
-        'font-size:'   + item.fontSize + ';' +
+        'font-size:'   + item.fontSize   + ';' +
         'font-family:' + item.fontFamily + ';' +
         'font-weight:' + item.fontWeight + ';' +
         'color:'       + item.m.hexColor + ';' +
@@ -950,9 +989,8 @@ setInterval(loadNews, 600000);
       item.fly = fly;
     });
 
-    // 4. In un unico requestAnimationFrame: attiva tutte le transizioni con stagger via delay
+    // Singolo rAF doppio per triggerare tutte le transizioni
     window.requestAnimationFrame(function() {
-      // Forza reflow su tutti insieme
       items.forEach(function(item) { item.fly.offsetHeight; });
 
       window.requestAnimationFrame(function() {
@@ -965,19 +1003,18 @@ setInterval(loadNews, 600000);
           item.fly.style.transition =
             'transform ' + DUR + 'ms ' + EASE + ' ' + delay + 'ms,' +
             '-webkit-transform ' + DUR + 'ms ' + EASE + ' ' + delay + 'ms';
-
-          // Forza secondo reflow per triggerare la transizione
           item.fly.offsetHeight;
           item.fly.style.transform = tf;
           item.fly.style.webkitTransform = tf;
 
-          // Quando arriva: colora lettera nel pill, rimuovi fly
           (function(fly, targetLetEl, targetPill, hexColor) {
             var done = false;
             function land() {
               if (done) return;
               done = true;
-              targetLetEl.style.setProperty('color', hexColor, 'important');
+              // Rimuovi qualsiasi colore inline precedente e imposta il nuovo
+              targetLetEl.removeAttribute('style');
+              targetLetEl.style.cssText = 'color:' + hexColor + '!important;display:inline-block;transition:color 0.35s ease,text-shadow 0.35s ease;';
               targetLetEl.classList.add('pill-letter-landed');
               targetPill.classList.add('pill-activated');
               if (fly.parentNode) fly.parentNode.removeChild(fly);
@@ -987,14 +1024,12 @@ setInterval(loadNews, 600000);
               fly.removeEventListener('transitionend', onEnd);
               land();
             });
-            // Fallback sicuro
-            window.setTimeout(land, delay + DUR + 200);
+            window.setTimeout(land, delay + DUR + 250);
           })(item.fly, item.targetLetEl, item.targetPill, item.m.hexColor);
         });
       });
     });
 
-    // 5. Dopo tutto: ripristina lettere originali e marca done
     var totalMs = (items.length - 1) * STAGGER + DUR + 600;
     window.setTimeout(function () {
       if (primaryRow) primaryRow.classList.add('hero-grynd-done');

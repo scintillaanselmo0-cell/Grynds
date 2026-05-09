@@ -880,9 +880,14 @@ setInterval(loadNews, 600000);
     if (ran) return;
     var cover   = document.querySelector('.cover');
     var letters = visibleLetters();
-    if (!cover || !lettersPreflightOk(letters)) return;
-    if (!coverShouldTriggerFly(cover))          return;
+    var sy = window.scrollY || window.pageYOffset || 0;
+    var vh = viewportHeight();
+    var r  = cover ? cover.getBoundingClientRect() : null;
+    console.log('[GRYND] tryFire | scrollY=' + sy + ' | letters=' + letters.length + ' | cover.top=' + (r ? Math.round(r.top) : 'n/a') + ' | vh=' + Math.round(vh));
+    if (!cover || !lettersPreflightOk(letters)) { console.log('[GRYND] preflight FAIL | cover=' + !!cover + ' | lettersOk=' + lettersPreflightOk(letters)); return; }
+    if (!coverShouldTriggerFly(cover))          { console.log('[GRYND] trigger FAIL | top=' + Math.round(r.top) + ' vs ' + Math.round(vh*0.6) + ' | bottom=' + Math.round(r.bottom) + ' vs ' + Math.round(vh)); return; }
     if (prefersReduced) { ran = true; teardownListeners(); return; }
+    console.log('[GRYND] FIRING animation!');
 
     ran = true;
     teardownListeners();

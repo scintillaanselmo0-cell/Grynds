@@ -100,29 +100,7 @@
 
 
 
-<div class="section-gradient-bridge"></div>
-<div class="zp-section" id="zp-section">
-  <div class="zp-sticky" id="zp-sticky">
-    <div class="zp-noise-layer"></div>
-    <div id="zp-frame"></div>
-    <div class="zp-caption" id="zp-caption">
-      <div id="zp-cap-en">
-        <p class="zp-caption-label">Five Paths. One Truth.</p>
-        <div class="zp-caption-title"><span style="color:var(--green2)">G</span><span style="color:var(--white)">R</span><span style="color:var(--green2)">Y</span><span style="color:var(--white)">N</span><span style="color:var(--green2)">D</span></div>
-        <p class="zp-caption-sub">No filters. No gurus. No bullshit.</p>
-      </div>
-      <div id="zp-cap-it" style="display:none;">
-        <p class="zp-caption-label">Cinque Percorsi. Una Verità.</p>
-        <div class="zp-caption-title"><span style="color:var(--green2)">G</span><span style="color:var(--white)">R</span><span style="color:var(--green2)">Y</span><span style="color:var(--white)">N</span><span style="color:var(--green2)">D</span></div>
-        <p class="zp-caption-sub">Nessun filtro. Nessun guru. Nessuna bugia.</p>
-      </div>
-    </div>
-    <div class="zp-scroll-indicator" id="zp-scroll-ind">
-      <span id="zp-scroll-label">Scroll</span>
-      <div class="zp-scroll-line"></div>
-    </div>
-  </div>
-</div>
+
 
 <div id="trading" class="chapter-header reveal"><div class="chapter-num">Chapter 01</div><div class="chapter-title">TRADING</div><div class="chapter-divider"></div></div>
 <div class="content reveal">
@@ -341,29 +319,7 @@
   <div class="warning-box"><span class="w-icon">◈</span><p>Questa guida contiene informazioni che potrebbero farti cambiare completamente direzione. Non è un avvertimento. È una promessa.</p></div>
 </div>
 
-<div class="section-gradient-bridge"></div>
-<div class="zp-section" id="zp-section-it">
-  <div class="zp-sticky" id="zp-sticky-it">
-    <div class="zp-noise-layer"></div>
-    <div id="zp-frame-it"></div>
-    <div class="zp-caption" id="zp-caption-it2">
-      <div id="zp-cap-en-it">
-        <p class="zp-caption-label">Five Paths. One Truth.</p>
-        <div class="zp-caption-title"><span style="color:var(--green2)">G</span><span style="color:var(--white)">R</span><span style="color:var(--green2)">Y</span><span style="color:var(--white)">N</span><span style="color:var(--green2)">D</span></div>
-        <p class="zp-caption-sub">No filters. No gurus. No bullshit.</p>
-      </div>
-      <div id="zp-cap-it2" style="display:none;">
-        <p class="zp-caption-label">Cinque Percorsi. Una Verità.</p>
-        <div class="zp-caption-title"><span style="color:var(--green2)">G</span><span style="color:var(--white)">R</span><span style="color:var(--green2)">Y</span><span style="color:var(--white)">N</span><span style="color:var(--green2)">D</span></div>
-        <p class="zp-caption-sub">Nessun filtro. Nessun guru. Nessuna bugia.</p>
-      </div>
-    </div>
-    <div class="zp-scroll-indicator" id="zp-scroll-ind-it">
-      <span id="zp-scroll-label-it">Scroll</span>
-      <div class="zp-scroll-line"></div>
-    </div>
-  </div>
-</div>
+
 
 <div class="chapter-header reveal"><div class="chapter-num">Capitolo 01</div><div class="chapter-title">TRADING</div><div class="chapter-divider"></div></div>
 <div class="content reveal">
@@ -789,16 +745,11 @@ function setLang(lang) {
   document.getElementById('scroll-text').textContent = t.scrollText;
   document.getElementById('sticky-text').innerHTML = t.stickyText;
   document.getElementById('sticky-btn').textContent = t.stickyBtn;
-  const zpLabel = document.getElementById('zp-scroll-label');
-  if (zpLabel) zpLabel.textContent = t.zpScrollLabel;
+
   document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.textContent === lang.toUpperCase()));
   document.getElementById('en').classList.toggle('active', lang === 'en');
   document.getElementById('it').classList.toggle('active', lang === 'it');
-  const capEN = document.getElementById('zp-cap-en');
-  const capIT = document.getElementById('zp-cap-it');
-  if (capEN) capEN.style.display = lang === 'en' ? '' : 'none';
-  if (capIT) capIT.style.display = lang === 'it' ? '' : 'none';
-  if (typeof updateZPLang === 'function') updateZPLang(lang);
+
   localStorage.setItem('lang', lang);
   loadNews();
 }
@@ -836,7 +787,7 @@ window.addEventListener('scroll', () => {
   const s = window.scrollY, h = document.documentElement.scrollHeight - window.innerHeight;
   document.getElementById('progress').style.width = (s/h*100) + '%';
   document.getElementById('sticky-cta').classList.toggle('visible', s > 400);
-  if (!zpTicking) { requestAnimationFrame(updateZP); zpTicking = true; }
+
 }, {passive:true});
 
 /* ============ REVEAL ON SCROLL ============ */
@@ -900,76 +851,7 @@ document.addEventListener('click', e=>{
 
 document.addEventListener('keydown', e=>{ if(e.key==='Escape') closePricing(); });
 
-/* ============ ZOOM PARALLAX ENGINE ============ */
-const ZP_IMAGES = [
-  { srcEN:'images/image-01.jpg', srcIT:'images/image-01.jpg', style:'top:37.5%;left:37.5%;width:25%;height:25%;', scaleEnd:4 },
-  { src:'images/image-02.jpg', style:'top:5%;left:33%;width:35%;height:30%;', scaleEnd:5 },
-  { src:'images/image-03.jpg', style:'top:15%;left:8%;width:20%;height:40%;', scaleEnd:6 },
-  { src:'images/image-04.jpg', style:'top:37.5%;left:63%;width:25%;height:25%;', scaleEnd:5 },
-  { src:'images/image-05.jpg', style:'top:57%;left:5%;width:30%;height:28%;', scaleEnd:8 },
-  { src:'images/image-06.jpg', style:'top:57%;left:72%;width:23%;height:28%;', scaleEnd:9 }
-];
 
-(function buildZP() {
-  ['zp-frame','zp-frame-it'].forEach(function(fid) {
-  const frame = document.getElementById(fid);
-  if (!frame) return;
-  ZP_IMAGES.forEach((img, i) => {
-    const layer = document.createElement('div');
-    layer.className = 'zp-img-layer';
-    layer.dataset.zpIdx = i;
-    const box = document.createElement('div');
-    box.className = 'zp-img-box';
-    box.style.cssText = img.style;
-    const el = document.createElement('img');
-    if (img.srcEN) {
-      el.src = currentLang === 'it' ? img.srcIT : img.srcEN;
-      el.dataset.srcen = img.srcEN;
-      el.dataset.srcit = img.srcIT;
-      el.classList.add('zp-bilingual');
-    } else {
-      el.src = img.src;
-    }
-    el.alt = '';
-    el.loading = i === 0 ? 'eager' : 'lazy';
-    el.decoding = 'async';
-    box.appendChild(el);
-    layer.appendChild(box);
-    frame.appendChild(layer);
-  });
-  }); // end forEach
-})();
-
-function updateZPLang(lang) {
-  document.querySelectorAll('.zp-bilingual').forEach(el => {
-    el.src = lang === 'it' ? el.dataset.srcit : el.dataset.srcen;
-  });
-}
-
-let zpTicking = false;
-
-function updateZPSection(sid, iid, cid, fid) {
-  const section = document.getElementById(sid);
-  const frame = document.getElementById(fid);
-  if (!section || !frame) return;
-  const rect = section.getBoundingClientRect();
-  if (rect.bottom < 0 || rect.top > window.innerHeight + 100) return;
-  const total = section.offsetHeight - window.innerHeight;
-  const t = Math.max(0, Math.min(1, -rect.top / total));
-  const ind = document.getElementById(iid);
-  const cap = document.getElementById(cid);
-  if (ind) ind.classList.toggle('hidden', t > 0.05);
-  if (cap) cap.style.opacity = Math.max(0, 1 - t * 3.5).toFixed(3);
-  frame.querySelectorAll('.zp-img-layer').forEach((layer, i) => {
-    const s1 = ZP_IMAGES[i] ? ZP_IMAGES[i].scaleEnd : 4;
-    layer.style.transform = 'scale(' + (1 + (s1-1)*t).toFixed(4) + ')';
-  });
-}
-function updateZP() {
-  updateZPSection('zp-section','zp-scroll-ind','zp-caption','zp-frame');
-  updateZPSection('zp-section-it','zp-scroll-ind-it','zp-caption-it2','zp-frame-it');
-  zpTicking = false;
-}
 </script>
 </body>
 </html>

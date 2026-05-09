@@ -31,7 +31,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;height:60px;padding:0 2rem;d
 @keyframes tickerScroll{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
 .cover{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding-top:92px;padding-bottom:4rem;padding-left:2rem;padding-right:2rem;position:relative;border-bottom:none;background:#000;}
 .zp-section{position:relative;height:300vh;border-bottom:1px solid var(--dark3);margin-top:-1px;}
-.zp-section::before{content:'';position:absolute;top:0;left:0;right:0;height:220px;background:linear-gradient(to bottom,#080808,#000);z-index:20;pointer-events:none;}
 .cover-tag{font-size:0.62rem;letter-spacing:0.4em;text-transform:uppercase;color:var(--gray);border:1px solid var(--gray);padding:0.4rem 1.2rem;margin-bottom:3rem;opacity:0;animation:fadeUp 0.8s 0.2s ease forwards;}
 .cover h1{font-family:var(--display);font-size:clamp(4rem,13vw,11rem);line-height:0.9;letter-spacing:0.02em;color:var(--white);opacity:0;animation:fadeUp 0.8s 0.4s ease forwards;}
 .cover .cover-h1-stack{display:flex;flex-direction:column;align-items:center;text-align:center;width:100%;}
@@ -167,6 +166,7 @@ p{font-size:0.95rem;color:var(--white2);margin-bottom:1rem;line-height:1.85;}
 /* ============ ZOOM PARALLAX ============ */
 /* zp-section defined above */
 .zp-sticky{position:sticky;top:92px;height:calc(100vh - 92px);overflow:hidden;background:#000;}
+.zp-sticky::before{content:'';position:absolute;top:0;left:0;right:0;height:260px;background:linear-gradient(to bottom,#080808 0%,transparent 100%);z-index:15;pointer-events:none;}
 .zp-noise-layer{position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='znoise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23znoise)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:5;opacity:0.4;}
 .zp-img-layer{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;will-change:transform;transform-origin:center center;}
 .zp-img-box{position:absolute;overflow:hidden;border:1px solid rgba(82,168,110,0.15);transition:border-color 0.4s ease;}

@@ -751,8 +751,8 @@ function setLang(lang) {
   document.getElementById('cover-tag').textContent = t.coverTag;
   document.getElementById('cover-sub').textContent = t.coverSub;
   document.getElementById('cover-cta').textContent = t.coverCta;
-  document.getElementById('pill-brand').textContent = t.pillBrand;
-  document.getElementById('pill-gambling').textContent = t.pillGambling;
+  document.getElementById('pill-brand').innerHTML = 'Personal Bra<span class="pill-target-letter" id="pill-brand-letter">n</span>d';
+  document.getElementById('pill-gambling').innerHTML = '<span class="pill-target-letter" id="pill-gambling-letter">G</span>' + (t.pillGambling || 'Gambling').slice(1);
   document.getElementById('scroll-text').textContent = t.scrollText;
   document.getElementById('sticky-text').innerHTML = t.stickyText;
   document.getElementById('sticky-btn').textContent = t.stickyBtn;

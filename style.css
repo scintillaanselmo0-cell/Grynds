@@ -39,7 +39,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;height:60px;padding:0 2rem;d
 .cover .cover-title-line--primary{display:block;}
 .cover .cover-title-line--secondary{display:block;margin-top:0.18em;font-family:var(--display);font-size:clamp(2rem,6.5vw,5.5rem);line-height:0.95;letter-spacing:0.05em;color:var(--green2);}
 .cover h1 .grynd-letter{display:inline;}
-.cover .cover-title-line--primary.hero-grynd-done .grynd-letter{visibility:visible!important;opacity:0.3;transition:opacity 0.45s ease;}
 .cover-sub{font-family:var(--serif);font-size:clamp(1rem,2.5vw,1.4rem);font-style:italic;color:var(--gray2);margin-top:1.5rem;max-width:560px;opacity:0;animation:fadeUp 0.8s 0.6s ease forwards;}
 .cover-topics{display:flex;flex-wrap:wrap;gap:0.6rem;justify-content:center;margin-top:2.5rem;opacity:0;animation:fadeUp 0.8s 0.8s ease forwards;}
 .topic-pill{font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--green2);border:1px solid rgba(82,168,110,0.3);padding:0.4rem 1rem;}
@@ -176,7 +175,6 @@ p{font-size:0.95rem;color:var(--white2);margin-bottom:1rem;line-height:1.85;}
 .zp-caption-label{font-size:0.58rem;letter-spacing:0.4em;text-transform:uppercase;color:var(--green);margin-bottom:0.5rem;}
 .zp-caption-title{font-family:var(--display);font-size:clamp(3rem,8vw,6rem);letter-spacing:0.04em;color:var(--white);line-height:0.95;text-align:center;}
 .zp-caption-title span{color:var(--green2);}
-.grynd-fly-letter{position:fixed;left:0;top:0;z-index:600;pointer-events:none;line-height:1;transform:translate(-50%,-50%);will-change:transform,opacity;font-family:var(--display);font-weight:400;}
 .zp-caption-sub{font-family:var(--serif);font-style:italic;font-size:1rem;color:var(--gray2);margin-top:0.6rem;}
 .zp-scroll-indicator{position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:0.4rem;transition:opacity 0.4s ease;z-index:10;pointer-events:none;}
 .zp-scroll-indicator.hidden{opacity:0;}
@@ -184,22 +182,3 @@ p{font-size:0.95rem;color:var(--white2);margin-bottom:1rem;line-height:1.85;}
 .zp-scroll-line{width:1px;height:32px;background:linear-gradient(to bottom,var(--green),transparent);animation:zpPulse 2s ease-in-out infinite;}
 @keyframes zpPulse{0%,100%{opacity:0.3;}50%{opacity:1;}}
 @media(max-width:768px){.zp-section{height:220vh;}.zp-sticky{top:92px;height:calc(100vh - 92px);}}
-
-/* ===== GRYND letter landing animation ===== */
-.pill-target-letter {
-  display: inline-block;
-  transition: color 0.35s ease, text-shadow 0.35s ease;
-  position: relative;
-  color: var(--green2);
-}
-.topic-pill .pill-target-letter.pill-letter-landed {
-  text-shadow: 0 0 10px currentColor;
-}
-/* Alta specificita per forzare il colore bianco sulle lettere N e R */
-.topic-pill .pill-target-letter[style*="color"] {
-  color: inherit;
-}
-.topic-pill.pill-activated {
-  box-shadow: 0 0 8px rgba(82,168,110,0.3);
-  transition: box-shadow 0.4s ease;
-}

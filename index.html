@@ -60,8 +60,8 @@
     <span class="topic-pill" id="pill-brand">Personal Bra<span class="pill-target-letter" id="pill-brand-letter">n</span>d</span>
     <span class="topic-pill" id="pill-gambling"><span class="pill-target-letter" id="pill-gambling-letter">G</span>ambling</span>
   </div>
-  <a href="#" class="cover-cta" id="cover-cta" onclick="openPricing(event)">Choose Your Plan →</a>
-  <p class="cover-cta-note">37€ · 97€ · 197€</p>
+  <a href="#" class="cover-cta" id="cover-cta" onclick="openPricing(event)">Get the Complete Guide →</a>
+  <p class="cover-cta-note">37€ · One-time payment · All 5 guides included</p>
   <div class="cover-scroll"><span id="scroll-text">Scroll</span><div class="scroll-line"></div></div>
 </div>
 
@@ -284,7 +284,7 @@
 <div class="closing reveal">
   <div class="big-text">NOW YOU<br><span>KNOW.</span></div>
   <p class="sub">Now choose. It's your move.</p>
-  <a href="#" class="cta" onclick="openPricing(event)">Choose Your Plan →</a>
+  <a href="#" class="cta" onclick="openPricing(event)">Get the Complete Guide →</a>
 </div>
 </div>
 
@@ -503,7 +503,7 @@
 <div class="closing reveal">
   <div class="big-text">ORA<br><span>SAI.</span></div>
   <p class="sub">Adesso scegli. Tocca a te.</p>
-  <a href="#" class="cta" onclick="openPricing(event)">Scegli il tuo Piano →</a>
+  <a href="#" class="cta" onclick="openPricing(event)">Acquista la guida completa →</a>
 </div>
 </div>
 
@@ -518,70 +518,29 @@
   <div class="pricing-inner">
     <button class="pricing-close" onclick="closePricing()">✕ Close</button>
     <div class="hero" style="padding-top:4rem;min-height:auto;padding-bottom:2rem;">
-      <p class="hero-eyebrow">Choose your path</p>
+      <p class="hero-eyebrow">One price. Everything included.</p>
       <h1 style="font-family:var(--display);font-size:clamp(3rem,8vw,6rem);color:var(--white);opacity:1;animation:none;">UNLOCK THE<br><em style="font-family:var(--serif);font-style:italic;color:var(--green2);font-size:0.7em;display:block;">Knowledge</em></h1>
-      <p class="hero-sub" style="opacity:1;animation:none;">One guide, all guides, or everything including the AI advisor.</p>
-    </div>
-    <div class="topic-section">
-      <span class="topic-label">Step 1 — For Base &amp; Mid plans</span>
-      <p class="topic-label-text">Which guide do you want to unlock?</p>
-      <div class="topics-grid">
-        <button class="topic-btn active" onclick="selectTopic(this,'Trading','en')">Trading</button>
-        <button class="topic-btn" onclick="selectTopic(this,'Dropshipping','en')">Dropshipping</button>
-        <button class="topic-btn" onclick="selectTopic(this,'Crypto','en')">Cryptocurrency</button>
-        <button class="topic-btn" onclick="selectTopic(this,'Creator','en')">Personal Brand</button>
-        <button class="topic-btn" onclick="selectTopic(this,'Gambling','en')">Gambling</button>
-      </div>
-      <p class="topic-note">* Premium plan includes all 5 guides automatically</p>
+      <p class="hero-sub" style="opacity:1;animation:none;">All 5 guides. One payment. Lifetime access.</p>
     </div>
     <div class="plans-section">
-      <div class="plans-grid">
-        <div class="plan">
-          <p class="plan-tier">Plan 01</p><h2 class="plan-name">BASE</h2>
+      <div class="plans-grid" style="grid-template-columns:1fr;max-width:480px;margin:0 auto;">
+        <div class="plan featured">
+          <p class="plan-tier">Complete Guide</p><h2 class="plan-name">GRYND</h2>
           <div class="plan-price"><span class="currency">€</span><span class="amount">37</span></div>
           <p class="plan-price-note">One-time payment · Lifetime access</p>
           <div class="plan-divider"></div>
           <ul class="plan-features">
-            <li><span class="check">◆</span><span><strong>1 guide of your choice</strong> — full in-depth version</span></li>
-            <li><span class="check">◆</span><span>Real mechanics, risks, and process explained step by step</span></li>
-            <li><span class="check">◆</span><span>Lifetime access to your chosen guide</span></li>
-            <li class="muted"><span class="check">—</span><span>AI Imprenditoriale not included</span></li>
-            <li class="muted"><span class="check">—</span><span>Other guides not included</span></li>
-          </ul>
-          <a href="#" class="plan-cta outline" id="en-cta-base">Get Base Plan →</a>
-        </div>
-        <div class="plan featured">
-          <div class="plan-badge">Most Popular</div>
-          <p class="plan-tier">Plan 02</p><h2 class="plan-name">MID</h2>
-          <div class="plan-price"><span class="currency">€</span><span class="amount">97</span></div>
-          <p class="plan-price-note">One-time payment · Lifetime access</p>
-          <div class="plan-divider"></div>
-          <ul class="plan-features">
-            <li><span class="check">◆</span><span><strong>1 guide of your choice</strong> — full in-depth version</span></li>
-            <li><span class="check">◆</span><span>Real mechanics, risks, and process explained step by step</span></li>
-            <li><span class="check">◆</span><span>Lifetime access to your chosen guide</span></li>
-            <li><span class="check">◆</span><span><strong>AI Imprenditoriale</strong> — 12 months of access</span></li>
-            <li><span class="check">◆</span><span>Ask before acting — get real answers before every decision</span></li>
-          </ul>
-          <a href="#" class="plan-cta solid" id="en-cta-mid">Get Mid Plan →</a>
-        </div>
-        <div class="plan">
-          <p class="plan-tier">Plan 03</p><h2 class="plan-name">PREMIUM</h2>
-          <div class="plan-price"><span class="currency">€</span><span class="amount">197</span></div>
-          <p class="plan-price-note">One-time payment · Lifetime access</p>
-          <div class="plan-divider"></div>
-          <ul class="plan-features">
             <li><span class="check">◆</span><span><strong>All 5 guides</strong> — Trading, Dropshipping, Crypto, Creator, Gambling</span></li>
+            <li><span class="check">◆</span><span>Real mechanics, risks, and process explained step by step</span></li>
             <li><span class="check">◆</span><span>Lifetime access to all guides + future updates</span></li>
-            <li><span class="check">◆</span><span><strong>AI Imprenditoriale</strong> — 12 months of access</span></li>
-            <li><span class="check">◆</span><span>Priority support + early access to new content</span></li>
+            <li><span class="check">◆</span><span>Immediate delivery — PDF in your inbox after payment</span></li>
           </ul>
-          <a href="#stripe-premium" class="plan-cta solid-green">Get Premium Plan →</a>
+          <a href="#" class="plan-cta solid" id="en-cta-base">Get the Complete Guide →</a>
         </div>
       </div>
     </div>
     <div class="comparison">
-      <div class="comparison-title">What's inside each guide</div>
+      <div class="comparison-title">What's inside the guide</div>
       <div class="guides-list">
         <div class="guide-item"><div class="guide-icon">01</div><div><div class="guide-name">Trading</div><div class="guide-sub">Markets, strategy, risk</div></div></div>
         <div class="guide-item"><div class="guide-icon">02</div><div><div class="guide-name">Dropshipping</div><div class="guide-sub">Products, ads, suppliers</div></div></div>
@@ -592,10 +551,8 @@
     </div>
     <div class="faq" style="padding-bottom:2rem;">
       <h2 class="faq-title">FAQ</h2>
-      <div class="faq-item"><div class="faq-q">How do I access my guide after purchase?<span class="arrow">▼</span></div><div class="faq-a">You'll receive an email immediately after payment with your personal access link.</div></div>
-      <div class="faq-item"><div class="faq-q">Can I upgrade my plan later?<span class="arrow">▼</span></div><div class="faq-a">Yes. You only pay the difference. Contact us after your purchase.</div></div>
-      <div class="faq-item"><div class="faq-q">What is the AI Imprenditoriale?<span class="arrow">▼</span></div><div class="faq-a">An AI with an entrepreneurial, no-nonsense mindset. Ask it real questions before making decisions and get direct, practical answers.</div></div>
-      <div class="faq-item"><div class="faq-q">How long is the AI access valid?<span class="arrow">▼</span></div><div class="faq-a">12 months from activation. Renewable at a discounted rate for existing members.</div></div>
+      <div class="faq-item"><div class="faq-q">How do I access the guides after purchase?<span class="arrow">▼</span></div><div class="faq-a">You'll receive an email immediately after payment with your personal access link to all 5 PDF guides.</div></div>
+      <div class="faq-item"><div class="faq-q">Do I get all 5 guides?<span class="arrow">▼</span></div><div class="faq-a">Yes. The single payment of €37 gives you lifetime access to all 5 guides — Trading, Dropshipping, Crypto, Personal Brand, and Gambling.</div></div>
     </div>
     <div class="guarantee" style="padding-bottom:3rem;">
       <div class="guarantee-box">
@@ -607,75 +564,33 @@
   </div>
 </div>
 
-<!-- ============ PRICING OVERLAY IT ============ -->
 <div id="pricing-it" class="pricing-overlay" style="display:none;">
   <div class="pricing-inner">
     <button class="pricing-close" onclick="closePricing()">✕ Chiudi</button>
     <div class="hero" style="padding-top:4rem;min-height:auto;padding-bottom:2rem;">
-      <p class="hero-eyebrow">Scegli il tuo percorso</p>
+      <p class="hero-eyebrow">Un prezzo. Tutto incluso.</p>
       <h1 style="font-family:var(--display);font-size:clamp(3rem,8vw,6rem);color:var(--white);opacity:1;animation:none;">SBLOCCA LA<br><em style="font-family:var(--serif);font-style:italic;color:var(--green2);font-size:0.7em;display:block;">Conoscenza</em></h1>
-      <p class="hero-sub" style="opacity:1;animation:none;">Una guida, tutte le guide, o tutto incluso con l'AI consulente.</p>
-    </div>
-    <div class="topic-section">
-      <span class="topic-label">Step 1 — Per i piani Base e Mid</span>
-      <p class="topic-label-text">Quale guida vuoi sbloccare?</p>
-      <div class="topics-grid">
-        <button class="topic-btn active" onclick="selectTopic(this,'Trading','it')">Trading</button>
-        <button class="topic-btn" onclick="selectTopic(this,'Dropshipping','it')">Dropshipping</button>
-        <button class="topic-btn" onclick="selectTopic(this,'Crypto','it')">Criptovalute</button>
-        <button class="topic-btn" onclick="selectTopic(this,'Creator','it')">Personal Brand</button>
-        <button class="topic-btn" onclick="selectTopic(this,'Azzardo','it')">Gioco d'Azzardo</button>
-      </div>
-      <p class="topic-note">* Il piano Premium include automaticamente tutte e 5 le guide</p>
+      <p class="hero-sub" style="opacity:1;animation:none;">Tutte e 5 le guide. Un pagamento. Accesso a vita.</p>
     </div>
     <div class="plans-section">
-      <div class="plans-grid">
-        <div class="plan">
-          <p class="plan-tier">Piano 01</p><h2 class="plan-name">BASE</h2>
+      <div class="plans-grid" style="grid-template-columns:1fr;max-width:480px;margin:0 auto;">
+        <div class="plan featured">
+          <p class="plan-tier">Guida Completa</p><h2 class="plan-name">GRYND</h2>
           <div class="plan-price"><span class="currency">€</span><span class="amount">37</span></div>
           <p class="plan-price-note">Pagamento unico · Accesso a vita</p>
           <div class="plan-divider"></div>
           <ul class="plan-features">
-            <li><span class="check">◆</span><span><strong>1 guida a tua scelta</strong> — versione completa e approfondita</span></li>
-            <li><span class="check">◆</span><span>Meccaniche reali, rischi e processo spiegati passo per passo</span></li>
-            <li><span class="check">◆</span><span>Accesso a vita alla guida scelta</span></li>
-            <li class="muted"><span class="check">—</span><span>AI Imprenditoriale non inclusa</span></li>
-            <li class="muted"><span class="check">—</span><span>Altre guide non incluse</span></li>
-          </ul>
-          <a href="#" class="plan-cta outline" id="it-cta-base">Scegli il Piano Base →</a>
-        </div>
-        <div class="plan featured">
-          <div class="plan-badge">Più Popolare</div>
-          <p class="plan-tier">Piano 02</p><h2 class="plan-name">MID</h2>
-          <div class="plan-price"><span class="currency">€</span><span class="amount">97</span></div>
-          <p class="plan-price-note">Pagamento unico · Accesso a vita</p>
-          <div class="plan-divider"></div>
-          <ul class="plan-features">
-            <li><span class="check">◆</span><span><strong>1 guida a tua scelta</strong> — versione completa e approfondita</span></li>
-            <li><span class="check">◆</span><span>Meccaniche reali, rischi e processo spiegati passo per passo</span></li>
-            <li><span class="check">◆</span><span>Accesso a vita alla guida scelta</span></li>
-            <li><span class="check">◆</span><span><strong>AI Imprenditoriale</strong> — 12 mesi di accesso</span></li>
-            <li><span class="check">◆</span><span>Chiedi prima di agire — risposte reali prima di ogni decisione</span></li>
-          </ul>
-          <a href="#" class="plan-cta solid" id="it-cta-mid">Scegli il Piano Mid →</a>
-        </div>
-        <div class="plan">
-          <p class="plan-tier">Piano 03</p><h2 class="plan-name">PREMIUM</h2>
-          <div class="plan-price"><span class="currency">€</span><span class="amount">197</span></div>
-          <p class="plan-price-note">Pagamento unico · Accesso a vita</p>
-          <div class="plan-divider"></div>
-          <ul class="plan-features">
             <li><span class="check">◆</span><span><strong>Tutte e 5 le guide</strong> — Trading, Dropshipping, Crypto, Creator, Azzardo</span></li>
+            <li><span class="check">◆</span><span>Meccaniche reali, rischi e processo spiegati passo per passo</span></li>
             <li><span class="check">◆</span><span>Accesso a vita a tutte le guide + aggiornamenti futuri</span></li>
-            <li><span class="check">◆</span><span><strong>AI Imprenditoriale</strong> — 12 mesi di accesso</span></li>
-            <li><span class="check">◆</span><span>Supporto prioritario + accesso anticipato ai nuovi contenuti</span></li>
+            <li><span class="check">◆</span><span>Consegna immediata — PDF nella tua casella dopo il pagamento</span></li>
           </ul>
-          <a href="#stripe-premium" class="plan-cta solid-green">Scegli il Piano Premium →</a>
+          <a href="#" class="plan-cta solid" id="it-cta-base">Acquista la guida completa →</a>
         </div>
       </div>
     </div>
     <div class="comparison">
-      <div class="comparison-title">Cosa contiene ogni guida</div>
+      <div class="comparison-title">Cosa contiene la guida</div>
       <div class="guides-list">
         <div class="guide-item"><div class="guide-icon">01</div><div><div class="guide-name">Trading</div><div class="guide-sub">Mercati, strategia, rischio</div></div></div>
         <div class="guide-item"><div class="guide-icon">02</div><div><div class="guide-name">Dropshipping</div><div class="guide-sub">Prodotti, ads, fornitori</div></div></div>
@@ -686,10 +601,8 @@
     </div>
     <div class="faq" style="padding-bottom:2rem;">
       <h2 class="faq-title">FAQ</h2>
-      <div class="faq-item"><div class="faq-q">Come accedo alla guida dopo l'acquisto?<span class="arrow">▼</span></div><div class="faq-a">Riceverai un'email immediatamente dopo il pagamento con il tuo link di accesso personale.</div></div>
-      <div class="faq-item"><div class="faq-q">Posso fare l'upgrade del piano in seguito?<span class="arrow">▼</span></div><div class="faq-a">Sì. Paghi solo la differenza. Contattaci dopo l'acquisto.</div></div>
-      <div class="faq-item"><div class="faq-q">Cos'è l'AI Imprenditoriale?<span class="arrow">▼</span></div><div class="faq-a">Un'AI con mentalità imprenditoriale, diretta e senza fronzoli. Le fai domande reali e ti dà risposte pratiche e operative.</div></div>
-      <div class="faq-item"><div class="faq-q">Per quanto tempo è valido l'accesso all'AI?<span class="arrow">▼</span></div><div class="faq-a">12 mesi dalla data di attivazione. Rinnovabile a tariffa scontata per i membri esistenti.</div></div>
+      <div class="faq-item"><div class="faq-q">Come accedo alle guide dopo l'acquisto?<span class="arrow">▼</span></div><div class="faq-a">Riceverai un'email immediatamente dopo il pagamento con il tuo link di accesso personale a tutte e 5 le guide in PDF.</div></div>
+      <div class="faq-item"><div class="faq-q">Ricevo davvero tutte e 5 le guide?<span class="arrow">▼</span></div><div class="faq-a">Sì. Con il pagamento unico di 37€ ottieni accesso a vita a tutte e 5 le guide — Trading, Dropshipping, Crypto, Personal Brand e Gioco d'Azzardo.</div></div>
     </div>
     <div class="guarantee" style="padding-bottom:3rem;">
       <div class="guarantee-box">
@@ -704,15 +617,15 @@
 <script>
 const LANG = {
   en: {
-    title:"GRYND — The Guide",logo:"<span style='color:var(--green2)'>G</span><span style='color:var(--white)'>R</span><span style='color:var(--green2)'>Y</span><span style='color:var(--white)'>N</span><span style='color:var(--green2)'>D</span>",coverTag:"Restricted Document — Limited Access",coverSub:"The guide nobody had the courage to write.",coverCta:"Choose Your Plan →",pillBrand:"Personal Brand",pillGambling:"Gambling",scrollText:"Scroll",zpScrollLabel:"Scroll",
+    title:"GRYND — The Guide",logo:"<span style='color:var(--green2)'>G</span><span style='color:var(--white)'>R</span><span style='color:var(--green2)'>Y</span><span style='color:var(--white)'>N</span><span style='color:var(--green2)'>D</span>",coverTag:"Restricted Document — Limited Access",coverSub:"The guide nobody had the courage to write.",coverCta:"Get the Complete Guide →",pillBrand:"Personal Brand",pillGambling:"Gambling",scrollText:"Scroll",zpScrollLabel:"Scroll",
     navLinks:'<li><a href="#intro">Intro</a></li><li><a href="#trading">Trading</a></li><li><a href="#dropshipping">Dropshipping</a></li><li><a href="#crypto">Crypto</a></li><li><a href="#creator">Creator</a></li><li><a href="#gambling">Gambling</a></li><li><a href="#consulting">Consulting</a></li>',
-    stickyText:'Ready to stop guessing? <strong>Unlock the full guide.</strong>',stickyBtn:"Choose Your Plan →",
+    stickyText:'Ready to stop guessing? <strong>Unlock the full guide.</strong>',stickyBtn:"Get the Complete Guide →",
     tickerFallback:["Bitcoin remains institutional investors' key asset in 2025","Global dropshipping market surpasses $500 billion","Ethereum protocol update: improved speed and lower fees","Meta Ads: new e-commerce campaign tools launched","TikTok Shop expands to Europe: major opportunity for sellers","Algorithmic trading represents 70% of global volumes"],
   },
   it: {
-    title:"GRYND — La Guida",logo:"<span style='color:var(--green2)'>G</span><span style='color:var(--white)'>R</span><span style='color:var(--green2)'>Y</span><span style='color:var(--white)'>N</span><span style='color:var(--green2)'>D</span>",coverTag:"Documento Riservato — Accesso Limitato",coverSub:"La guida che nessuno aveva il coraggio di scrivere.",coverCta:"Scegli il tuo Piano →",pillBrand:"Personal Brand",pillGambling:"Gambling",scrollText:"Scorri",zpScrollLabel:"Scorri",
+    title:"GRYND — La Guida",logo:"<span style='color:var(--green2)'>G</span><span style='color:var(--white)'>R</span><span style='color:var(--green2)'>Y</span><span style='color:var(--white)'>N</span><span style='color:var(--green2)'>D</span>",coverTag:"Documento Riservato — Accesso Limitato",coverSub:"La guida che nessuno aveva il coraggio di scrivere.",coverCta:"Acquista la guida completa →",pillBrand:"Personal Brand",pillGambling:"Gambling",scrollText:"Scorri",zpScrollLabel:"Scorri",
     navLinks:'<li><a href="#intro-it">Intro</a></li><li><a href="#trading">Trading</a></li><li><a href="#dropshipping">Dropshipping</a></li><li><a href="#crypto">Crypto</a></li><li><a href="#creator">Creator</a></li><li><a href="#gambling">Gambling</a></li><li><a href="#consulenza">Consulenza</a></li>',
-    stickyText:'Pronto a smettere di girare in tondo? <strong>Sblocca la guida completa.</strong>',stickyBtn:"Scegli il tuo Piano →",
+    stickyText:'Pronto a smettere di girare in tondo? <strong>Sblocca la guida completa.</strong>',stickyBtn:"Acquista la guida completa →",
     tickerFallback:["Bitcoin rimane l'asset di riferimento degli investitori istituzionali","Il mercato globale del dropshipping supera i 500 miliardi","Ethereum aggiorna il protocollo: velocità migliorate","Meta Ads: nuovi strumenti per campagne e-commerce","TikTok Shop si espande in Europa: opportunità per i seller","Il trading algoritmico rappresenta il 70% dei volumi globali"],
   }
 };

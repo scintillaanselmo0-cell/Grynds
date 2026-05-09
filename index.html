@@ -849,11 +849,13 @@ setInterval(loadNews, 600000);
   }
 
   function coverShouldTriggerFly(cover) {
+    var sy = window.scrollY || window.pageYOffset || 0;
+    if (sy < 10) return false;
     var vh = viewportHeight();
     var r  = cover.getBoundingClientRect();
-    var sy = window.scrollY || window.pageYOffset || 0;
-    if (sy < 12) return false;
-    return r.top < vh * 0.48 || r.bottom < vh * 0.9;
+    // Parte appena la cover inizia a uscire dalla viewport in alto
+    // oppure appena il fondo della cover si avvicina al fondo della viewport
+    return r.top < vh * 0.6 || r.bottom < vh;
   }
 
   function lettersPreflightOk(letters) {
@@ -864,44 +866,14 @@ setInterval(loadNews, 600000);
     });
   }
 
-  /* Ritorna il centro in viewport di un elemento.
-     Se la rect e' zero (elemento inline non misurato), usa il parent. */
+  /* Ritorna il centro in viewport di un elemento span inline.
+     Forza display:inline-block temporaneamente per ottenere rect affidabili. */
   function getCenter(el) {
+    var prev = el.style.display;
+    el.style.display = 'inline-block';
     var r = el.getBoundingClientRect();
-    // Se la rect e' valida (larghezza > 0) usala
-    if (r.width > 0 && r.height > 0) {
-      return { x: r.left + r.width / 2, y: r.top + r.height / 2, fontSize: null, r: r };
-    }
-    // Fallback: crea un clone temporaneo inline-block per misurarlo
-    var clone = document.createElement('span');
-    clone.textContent = el.textContent;
-    var cs = window.getComputedStyle(el);
-    clone.style.cssText =
-      'position:fixed;visibility:hidden;pointer-events:none;' +
-      'font-size:' + cs.fontSize + ';' +
-      'font-family:' + cs.fontFamily + ';' +
-      'font-weight:' + cs.fontWeight + ';' +
-      'display:inline-block;';
-    // Inseriscilo accanto all'elemento originale
-    el.parentNode.insertBefore(clone, el.nextSibling);
-    var cr = clone.getBoundingClientRect();
-    // Usa la posizione del parent per Y, e del clone per le dimensioni
-    var pr = el.parentNode.getBoundingClientRect();
-    el.parentNode.removeChild(clone);
-    // Se ancora zero usa il centro del parent
-    if (cr.width === 0) {
-      return { x: pr.left + pr.width / 2, y: pr.top + pr.height / 2, fontSize: cs.fontSize, r: pr };
-    }
-    // Ricostruisci la posizione X stimando la posizione della lettera nel parent
-    // usando offsetLeft se disponibile
-    var offsetX = el.offsetLeft || 0;
-    var offsetY = el.offsetTop  || 0;
-    return {
-      x: pr.left + offsetX + cr.width / 2,
-      y: pr.top  + offsetY + cr.height / 2,
-      fontSize: cs.fontSize,
-      r: { width: cr.width, height: cr.height }
-    };
+    el.style.display = prev;
+    return { x: r.left + r.width / 2, y: r.top + r.height / 2 };
   }
 
   function tryFire() {
@@ -1013,8 +985,7 @@ setInterval(loadNews, 600000);
               if (done) return;
               done = true;
               // Rimuovi qualsiasi colore inline precedente e imposta il nuovo
-              targetLetEl.removeAttribute('style');
-              targetLetEl.style.cssText = 'color:' + hexColor + '!important;display:inline-block;transition:color 0.35s ease,text-shadow 0.35s ease;';
+              targetLetEl.setAttribute('style', 'color:' + hexColor + ' !important; display:inline-block;');
               targetLetEl.classList.add('pill-letter-landed');
               targetPill.classList.add('pill-activated');
               if (fly.parentNode) fly.parentNode.removeChild(fly);
